@@ -4,7 +4,7 @@ import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 const poppins = Poppins({
-  weight: ['600', '700'], 
+  weight: ['300','400','600', '700'], 
   subsets: ["latin"]
 });
 

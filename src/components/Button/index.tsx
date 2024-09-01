@@ -22,7 +22,7 @@ const Button: React.FC<Props> = ({
   return (
     <button
       onClick={onClick}
-      className={classNames('rounded-lg', className)}
+      className={classNames('rounded-[30px]', className)}
       style={{
         backgroundColor: color || undefined,
         border: border || undefined,

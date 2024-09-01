@@ -1,8 +1,8 @@
 const DownloadAppStoreBtn = () => {
   return (
     <>
-      {/* <div className="flex mt-3 sm:w-48 h-14 bg-black text-white rounded-lg items-center justify-center w-auto"></div> */}
-      <div className='flex mt-3 sm:w-48 h-14 bg-black text-white rounded-lg items-center justify-center w-auto'>
+      {/* <div className="flex mt-3 sm:w-48 h-14 bg-black text-white rounded-[30px] items-center justify-center w-auto"></div> */}
+      <div className='flex mt-3 sm:w-48 h-14 bg-black text-white rounded-[30px] items-center justify-center w-auto'>
         <div className='mr-3'>
           <svg viewBox='0 0 384 512' width='30'>
             <path
