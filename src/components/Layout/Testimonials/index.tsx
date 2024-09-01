@@ -8,7 +8,7 @@ import testimonialsSmall from '../../../../public/testimonials-small.svg';
 const Testimonials = () => {
     return (
         <section className="px-4 md:px-8 lg:px-16 py-8 bg-[#ffff] overflow-x-auto">
-            <h2 className="text-3xl font-bold text-[rgb(30,77,56)] mb-8 text-left">Testimonials</h2>
+            <h2 className="text-3xl font-bold text-[rgb(30,77,56)] mb-8 text-left">testimonials</h2>
             <div className="">
                 <div className='grid grid-cols-12 gap-6'>
                     {/* Grid Item 1 */}
