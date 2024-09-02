@@ -10,9 +10,9 @@ export default function Home() {
     <>
       <HeroSection />
       <Testimonials />
-      {/* <GetStarted />
+      <GetStarted />
       <HowItWorks />
-      <FooterCarousel /> */}
+      {/* <FooterCarousel /> */}
     </>
   );
 }
