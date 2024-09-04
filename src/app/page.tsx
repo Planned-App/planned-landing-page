@@ -12,7 +12,7 @@ export default function Home() {
       <Testimonials />
       <GetStarted />
       <HowItWorks />
-      {/* <FooterCarousel /> */}
+      <FooterCarousel />
     </>
   );
 }
