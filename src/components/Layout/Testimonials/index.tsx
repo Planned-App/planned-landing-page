@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from 'next/image'; // Import the Next.js Image component
 import testimonials1 from '../../../../public/testimonials-image-1.svg';
 import testimonials2 from '../../../../public/testimonials-image-2.svg';
 import testimonials3 from '../../../../public/testimonials-image-3.svg';
@@ -8,27 +8,27 @@ import testimonialsSmall from '../../../../public/testimonials-small.svg';
 const Testimonials = () => {
     return (
         <section className="px-4 md:px-8 lg:px-16 py-8 bg-[#ffff] overflow-x-auto">
-            <h2 className="text-3xl font-bold text-[rgb(30,77,56)] mb-8 text-left">testimonials</h2>
-            <div className="">
+            <h2 className="text-3xl font-bold text-[rgb(30,77,56)] mb-8 text-left">Testimonials</h2>
+            <div>
                 <div className='grid grid-cols-12 gap-6'>
                     {/* Grid Item 1 */}
                     <div className="xl:col-span-4 col-span-12 flex xl:flex-row flex-col border-4 border-[#E1E6C8] p-4 bg-[#1E4D38] text-white rounded-[30px]">
                         <div className='hidden xl:block xl:w-[40%]'>
-                            <img
-                                src={testimonials1.src}
-                                alt="testimonial image"
+                            <Image
+                                src={testimonials1}
+                                alt="testimonial image 1"
                                 className='w-full rounded-[30px]'
+                                layout='responsive' // Use responsive layout for better sizing
                             />
                         </div>
                         <div className='xl:hidden w-full'>
-                            <img
-                                src={testimonialsSmall.src}
-                                alt="testimonial image"
+                            <Image
+                                src={testimonialsSmall}
+                                alt="testimonial small image"
                                 className='w-full rounded-[30px]'
+                                layout='responsive'
                             />
                         </div>
-
-
 
                         <div className='flex flex-col flex-1 xl:ml-5 ml-0 mt-3'>
                             <p className="text-lg mb-2 text-[#E1E6C8]">ONE WORD – OBSESSED!</p>
@@ -58,10 +58,11 @@ const Testimonials = () => {
                             <p className="mt-4 text-md font-bold">– SALLY J.</p>
                         </div>
                         <div className='flex justify-end'>
-                            <img
-                                src={testimonials2.src}
-                                alt="testimonial image"
+                            <Image
+                                src={testimonials2}
+                                alt="testimonial image 2"
                                 className='w-[90%] rounded-[30px]'
+                                layout='responsive' // Use responsive layout for better sizing
                             />
                         </div>
                     </div>
@@ -79,10 +80,11 @@ const Testimonials = () => {
                     {/* Grid Item 1 */}
                     <div className="xl:col-span-3 col-span-12 flex flex-col border-4 border-[#E1E6C8] p-4 bg-[#FFFF] rounded-[30px]">
                         <div className='flex justify-center'>
-                            <img
-                                src={testimonials3.src}
-                                alt="testimonial image"
+                            <Image
+                                src={testimonials3}
+                                alt="testimonial image 3"
                                 className='w-[100%] h-auto rounded-[30px]'
+                                layout='responsive' // Use responsive layout for better sizing
                             />
                         </div>
                         <div className='flex flex-col flex-1'>
@@ -115,10 +117,11 @@ const Testimonials = () => {
                     {/* Grid Item 4 */}
                     <div className="col-span-3 xl:flex flex-col border-4 border-[#E1E6C8] p-4 bg-[#FFFF] rounded-[30px] hidden">
                         <div className='flex justify-center'>
-                            <img
-                                src={testimonials3.src}
-                                alt="testimonial image"
+                            <Image
+                                src={testimonials3}
+                                alt="testimonial image 3"
                                 className='w-[100%] h-auto rounded-[30px]'
+                                layout='responsive' // Use responsive layout for better sizing
                             />
                         </div>
                         <div className='flex flex-col flex-1'>
@@ -132,8 +135,6 @@ const Testimonials = () => {
                 </div>
             </div>
         </section>
-
-
     );
 };
 
