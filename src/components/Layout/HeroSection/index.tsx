@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
                                 layout='intrinsic'
                                className="absolute top-[30px] right-[60px] sm:top-[-43px] sm:right-[-40px] h-auto pointer-events-none z-0"
                             />
-                            <p className='z-10 inline-block text-7xl font-bold text-[#1E4D38]'>
+                            <p className='z-10 inline-block text-7xl font-bold text-[#1E4D38] relative'>
                                 made simple.
                             </p>
                         </div>
