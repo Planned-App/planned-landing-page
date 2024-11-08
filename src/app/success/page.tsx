@@ -1,4 +1,3 @@
-// pages/success.tsx
 import { useEffect } from 'react';
 
 const Success = () => {

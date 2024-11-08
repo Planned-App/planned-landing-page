@@ -5,6 +5,7 @@ import HowItWorks from '@/components/Layout/HowItWorks';
 import Testimonials from '@/components/Layout/Testimonials';
 import FooterCarousel from '@/components/Layout/FooterCarousel';
 import WhatsIncluded from '@/components/Layout/WhatsIncluded';
+import TestimonialsCarousel from '@/components/Layout/TestimonialsCarousel';
 
 export default function Home() {
   return (
@@ -12,11 +13,9 @@ export default function Home() {
       <HeroSection />
       <HowItWorks />
       <GetStarted />
-      
+      <TestimonialsCarousel />
       <Testimonials />
-      {/* <WhatsIncluded/> */}
-
-
+      <WhatsIncluded />
       <FooterCarousel />
     </>
   );

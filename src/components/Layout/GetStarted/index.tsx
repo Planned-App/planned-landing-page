@@ -10,11 +10,13 @@ const GetStarted: NextPage<{}> = () => {
     // State to keep track of selected membership
     const [selectedPlan, setSelectedPlan] = useState<'monthly' | 'yearly'>('yearly');
 
-    console.log('selectedPlan', selectedPlan)
+    const joinNowUrl = selectedPlan === 'monthly'
+        ? 'https://buy.stripe.com/test_28o6q81Sp14vepW5kk'
+        : 'https://buy.stripe.com/test_00gdSAeFbaF5fu09AB';
 
     return (
         <section className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
-            <h2 className="text-3xl font-bold text-[#1E4D38] mb-8 text-center">Get Started Today</h2>
+            <h2 className="text-3xl font-bold text-[#1E4D38] mb-8 text-center">what’s included...</h2>
             <div className="bg-white border-4 border-[#1E4D38] px-6 py-6 md:px-16 md:pb-10 md:pt-16 rounded-lg w-full max-w-4xl">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -53,7 +55,9 @@ const GetStarted: NextPage<{}> = () => {
                 </div>
 
                 <div className="flex justify-center mt-5">
-                    <Button className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>Join Now</Button>
+                    <Button
+                        href={joinNowUrl}
+                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>Join Now</Button>
                 </div>
             </div>
         </section>
