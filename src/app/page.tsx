@@ -14,7 +14,7 @@ export default function Home() {
       <HowItWorks />
       <GetStarted />
       <TestimonialsCarousel />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <WhatsIncluded />
       <FooterCarousel />
     </>
