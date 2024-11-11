@@ -11,34 +11,34 @@ import plannedLogo from '../../../../public/cart-outline.svg';
 import foodIcon from '../../../../public/food-icon.svg';
 
 const scrollToJoinNow = () => {
-    // const targetElement = document.getElementById("join-now");
-    // if (!targetElement) return;
+    const targetElement = document.getElementById("join-now");
+    if (!targetElement) return;
 
-    // const startPosition = window.pageYOffset;
-    // const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
-    // const distance = targetPosition - startPosition;
-    // const duration = 1000; // Duration in milliseconds (1 second)
-    // let startTime: number | null = null;
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Duration in milliseconds (1 second)
+    let startTime: number | null = null;
 
-    // function animation(currentTime: number) {
-    //     if (startTime === null) startTime = currentTime;
-    //     const timeElapsed = currentTime - startTime;
-    //     const scrollProgress = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+    function animation(currentTime: number) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const scrollProgress = easeInOutQuad(timeElapsed, startPosition, distance, duration);
 
-    //     window.scrollTo(0, scrollProgress);
+        window.scrollTo(0, scrollProgress);
 
-    //     if (timeElapsed < duration) requestAnimationFrame(animation);
-    // }
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
 
-    // // Easing function for smoother scroll animation
-    // function easeInOutQuad(t: number, b: number, c: number, d: number) {
-    //     t /= d / 2;
-    //     if (t < 1) return (c / 2) * t * t + b;
-    //     t--;
-    //     return (-c / 2) * (t * (t - 2) - 1) + b;
-    // }
+    // Easing function for smoother scroll animation
+    function easeInOutQuad(t: number, b: number, c: number, d: number) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
 
-    // requestAnimationFrame(animation);
+    requestAnimationFrame(animation);
 };
 const HeroSection: React.FC = () => {
    
