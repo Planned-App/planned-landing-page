@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from '../../../../public/footer-logo.png';
+import Link from 'next/link';
 
 const Footer: React.FC = () => {
     return (
@@ -18,13 +19,16 @@ const Footer: React.FC = () => {
 
                 {/* Right Side: Links */}
                 <div className="text-center md:text-right flex flex-col md:space-y-2 space-y-1 md:space-x-0 md:items-end text-[#1E4D38]">
-                    <a href="/terms" className="text-base md:text-xl hover:underline">
+                    <Link href="/terms-and-condition" className="text-base md:text-xl hover:underline">
                         TERMS + CONDITIONS
-                    </a>
-                    <a href="/privacy" className="text-base md:text-xl hover:underline">
+                    </Link>
+                    <Link href="/privacy-policy" className="text-base md:text-xl hover:underline">
                         PRIVACY POLICY
-                    </a>
-                    <a href="/contact" className="text-base md:text-xl hover:underline">
+                    </Link>
+                    <Link href="/acceptable-user-policy" className="text-base md:text-xl hover:underline">
+                        ACCEPTABLE USE POLICY
+                    </Link>
+                    <a href="mailto:support@joinplanned.com" className="text-base md:text-xl hover:underline">
                         CONTACT
                     </a>
                 </div>
