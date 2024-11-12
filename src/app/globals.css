@@ -71,3 +71,10 @@ span.swiper-pagination {
   margin-top: 2rem;
   text-align: center;
 } */
+
+.cardTitle {
+  /* white-space: normal; */
+  /* overflow: hidden; */
+  /* word-break: break-word; */
+  /* text-align: center; */
+}

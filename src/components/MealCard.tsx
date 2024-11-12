@@ -5,24 +5,33 @@ import Image from 'next/image';
 interface MealCardProps {
     imageSrc: string;
     title: string;
-    time: number;
-    calories: number;
+    time: string;
+    calories: string;
 }
 
 const MealCard: React.FC<MealCardProps> = ({ imageSrc, title, time, calories }) => {
     return (
-        <div className="bg-white rounded-[30px] shadow-lg p-4 max-w-xs  border-4 border-[#E1E6C8]">
-            <div className="border-2 border-gray-100 rounded-[30px] overflow-hidden mb-3">
+        <div className="bg-white rounded-[0.9375rem] shadow-lg p-2 min-w-60 border-4 border-[#E1E6C8]">
+            <div className="border-2 border-gray-100 rounded-[0.9375rem] overflow-hidden mb-3 w-full">
                 <Image
                     src={imageSrc}
                     alt={title}
                     layout="responsive"
-                    width={115}
-                    height={115}
-                    className="object-cover"
+                    width={200} // Set a fixed width
+                    height={200} // Set a fixed height
+                    className="object-cover w-full h-full"
                 />
             </div>
-            <h3 className="text-lg font-semibold mb-2 text-[#000000]">{title}</h3>
+            <h3 className="text-lg font-semibold mb-2 text-[#000000] text-left"
+                style={{
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                    whiteSpace: 'normal',
+                }}>
+                {title}
+            </h3>
             <div className="grid grid-cols-2 text-gray-600">
                 <span className="flex items-center space-x-1">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
