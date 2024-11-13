@@ -73,12 +73,12 @@ const WhatsIncluded: NextPage<{}> = () => {
 
                     {/* Yearly Membership */}
                     <div
-                        className={`relative p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer`}
+                        className={`relative p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer mt-10 md:mt-0`}
                         onClick={() => handlePlanChange('yearly')}
                     >
                         <div className="absolute top-[-1.125rem] right-[-0.1875rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
                             <Image src={arrowIcon} alt="Arrow pointing to discount" width={30} height={14} className="ml-2" />
-                            <span className="mr-[-2.5rem] ml-[-4rem] absolute top-[-25px] text-2xl" >51% off!</span>
+                            <span className="md:mr-[-2.5rem] mr-[-1.2rem] ml-[-4rem] absolute top-[-25px] text-2xl" >51% off!</span>
                         </div>
                         {selectedPlan === 'yearly' && (
                             <Image src={checkIcon} alt="Selected check icon" width={20} height={20} className="absolute top-2 left-2" />
