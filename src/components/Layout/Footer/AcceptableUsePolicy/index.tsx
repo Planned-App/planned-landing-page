@@ -28,7 +28,7 @@ const AcceptableUsePolicy: React.FC = () => {
             </p>
 
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">3. Prohibited Conduct</h2>
-            <p className="mb-4 text-base md:text-lg text-justify">
+        <p className="mb-4 text-base md:text-lg text-justify">AcceptableUsePolicy
                 <strong>Harassment and Abuse:</strong> Users must not engage in any form of harassment, abusive behavior, threats, hate speech, discrimination, or promotion of violence, even outside the app, if such behavior harms the Planned community or brand.
             </p>
             <p className="mb-4 text-base md:text-lg text-justify">
@@ -52,7 +52,7 @@ const AcceptableUsePolicy: React.FC = () => {
                 <strong>Allergen Responsibility:</strong> Users are responsible for reviewing the ingredients of each meal and determining their compatibility with any allergies or dietary restrictions. Planned is not responsible for any allergic reactions or health-related issues resulting from the consumption of meals provided through the app.
             </p>
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>Instacart Integration:</strong> Grocery delivery services provided through Instacart are subject to Instacart's own terms and conditions. Planned is not responsible for any issues or disputes related to Instacart orders.
+                <strong>Instacart Integration:</strong> Grocery delivery services provided through Instacart are subject to Instacart&rsquo;s own terms and conditions. Planned is not responsible for any issues or disputes related to Instacart orders.
             </p>
 
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">5. Intellectual Property</h2>
@@ -71,7 +71,7 @@ const AcceptableUsePolicy: React.FC = () => {
 
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">7. Termination of Access</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                Claire Hodgins LLC reserves the right to suspend or terminate access to Planned for any user who violates this Acceptable Use Policy or engages in behavior that could harm the app’s community, reputation, or integrity.
+                Claire Hodgins LLC reserves the right to suspend or terminate access to Planned for any user who violates this Acceptable Use Policy or engages in behavior that could harm the app&rsquo;s community, reputation, or integrity.
                 Repeated violations or severe misconduct may result in permanent termination of the account and forfeiture of any access to Planned services.
             </p>
 
