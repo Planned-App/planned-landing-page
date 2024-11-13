@@ -10,7 +10,38 @@ import taskIcon from '../../../../public/task-icon.svg';
 import plannedLogo from '../../../../public/cart-outline.svg';
 import foodIcon from '../../../../public/food-icon.svg';
 
+const scrollToJoinNow = () => {
+    const targetElement = document.getElementById("join-now");
+    if (!targetElement) return;
+
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Duration in milliseconds (1 second)
+    let startTime: number | null = null;
+
+    function animation(currentTime: number) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const scrollProgress = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+
+        window.scrollTo(0, scrollProgress);
+
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Easing function for smoother scroll animation
+    function easeInOutQuad(t: number, b: number, c: number, d: number) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+};
 const HeroSection: React.FC = () => {
+   
     return (
         <>
             <section className='bg-[#ffff] overflow-hidden w-screen min-h-[130vh] sm:min-h-screen relative max-lg:h-auto bg-hero bg-no-repeat bg-cover h-fit'>
@@ -25,9 +56,9 @@ const HeroSection: React.FC = () => {
                                 src={drawingCircle}
                                 alt="circle"
                                 layout='intrinsic'
-                               className="absolute top-[30px] right-[60px] sm:top-[-43px] sm:right-[-40px] h-auto pointer-events-none z-0"
+                                className="absolute top-[30px] right-[60px] sm:top-[-43px] sm:right-[-40px] h-auto pointer-events-none z-0"
                             />
-                            <p className='z-10 inline-block text-7xl font-bold text-[#1E4D38]'>
+                            <p className='z-10 inline-block text-7xl font-bold text-[#1E4D38] relative'>
                                 made simple.
                             </p>
                         </div>
@@ -35,7 +66,7 @@ const HeroSection: React.FC = () => {
                     <p className='text-lg font-bold text-[#1E4D38]'>Plan healthy and delicious meals, generate a</p>
                     <p className='text-lg font-bold text-[#1E4D38]'>grocery list, shop & enjoy!</p>
 
-                    <Button className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>Get started</Button>
+                    <Button onClick={scrollToJoinNow} href="#join-now" className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>Get started</Button>
                 </div>
 
                 <section className="bg-[#E1E6C8] py-4 w-full absolute bottom-0 left-0">

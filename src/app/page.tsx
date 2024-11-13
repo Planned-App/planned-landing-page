@@ -4,15 +4,21 @@ import HeroSection from '@/components/Layout/HeroSection';
 import HowItWorks from '@/components/Layout/HowItWorks';
 import Testimonials from '@/components/Layout/Testimonials';
 import FooterCarousel from '@/components/Layout/FooterCarousel';
+import WhatsIncluded from '@/components/Layout/WhatsIncluded';
+import TestimonialsCarousel from '@/components/Layout/TestimonialsCarousel';
+import Footer from '@/components/Layout/Footer';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <Testimonials />
-      <GetStarted />
       <HowItWorks />
+      <GetStarted />
+      <TestimonialsCarousel />
+      {/* <Testimonials /> */}
+      <WhatsIncluded />
       <FooterCarousel />
+      <Footer />
     </>
   );
 }

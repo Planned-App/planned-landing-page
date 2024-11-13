@@ -35,3 +35,46 @@ body {
     text-wrap: balance;
   }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #1e4d38 !important;
+  width: 20px;
+  height: 20px;
+}
+/* Custom styles for the Swiper pagination bullets */
+/* span.swiper-pagination-bullet.swiper-pagination-bullet-active-prev,
+span.swiper-pagination-bullet.swiper-pagination-bullet-active-next {
+  width: 20px;
+  height: 20px;
+  background-color: #e1e6c8;
+  opacity: 1;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
+  background-color: #1e4d38;
+  width: 20px;
+  height: 20px;
+}
+span.swiper-pagination.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #e1e6c8;
+  opacity: 1;
+  margin: 0 4px;
+}
+
+span.swiper-pagination-bullet-active-next-next,
+span.swiper-pagination-bullet.swiper-pagination-bullet-active-prev-prev{
+  background-color: #1e4d38;
+}
+span.swiper-pagination {
+  position: relative !important;
+  margin-top: 2rem;
+  text-align: center;
+} */
+
+.cardTitle {
+  /* white-space: normal; */
+  /* overflow: hidden; */
+  /* word-break: break-word; */
+  /* text-align: center; */
+}

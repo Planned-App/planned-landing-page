@@ -43,6 +43,7 @@ const NavbarComponent: NextPage<{}> = () => {
                             <Link href='/'>
                                 <Image
                                     src={logo}
+                                    width={270}
                                     alt='Planned Logo'
                                     layout='intrinsic' // Adjust layout as needed (e.g., 'fixed', 'responsive')
                                     className='lg:mr-16 cursor-pointer'
