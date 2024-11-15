@@ -41,6 +41,10 @@ body {
   width: 20px;
   height: 20px;
 }
+
+.swiper-button-prev, .swiper-button-next{
+  color: #1e4d38 !important;
+}
 /* Custom styles for the Swiper pagination bullets */
 /* span.swiper-pagination-bullet.swiper-pagination-bullet-active-prev,
 span.swiper-pagination-bullet.swiper-pagination-bullet-active-next {
