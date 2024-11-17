@@ -16,7 +16,7 @@ const FAQ: React.FC = () => {
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>How does the grocery list work?</strong> Planned’s grocery list automatically compiles all the ingredients you need for your weekly plan, organizing them in an easy-to-follow list. You can also add extra items to your list if you wish to get things other than what's on your meal plan. For added convenience, Planned offers grocery delivery through Instacart and other integrations, saving you time and ensuring you have everything for your planned meals. You may organize the grocery list by date range if you rather shop for a few days at once rather than for a whole week.
+                <strong>How does the grocery list work?</strong> Planned&rsquo;s grocery list automatically compiles all the ingredients you need for your weekly plan, organizing them in an easy-to-follow list. You can also add extra items to your list if you wish to get things other than what's on your meal plan. For added convenience, Planned offers grocery delivery through Instacart and other integrations, saving you time and ensuring you have everything for your planned meals. You may organize the grocery list by date range if you rather shop for a few days at once rather than for a whole week.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
@@ -36,11 +36,11 @@ const FAQ: React.FC = () => {
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>Can I use Planned without the meal plan feature?</strong> Yes, even if you’re not using the meal plan, you’ll have access to all recipes anytime with cooking instructions. Browse the collection and choose what you want to make for dinner! We also have a feature called ‘cooking mode’ which ensures your phone screen will stay on while you're cooking.
+                <strong>Can I use Planned without the meal plan feature?</strong> Yes, even if you&rsquo;re not using the meal plan, you&rsquo;ll have access to all recipes anytime with cooking instructions. Browse the collection and choose what you want to make for dinner! We also have a feature called ‘cooking mode&rsquo; which ensures your phone screen will stay on while you're cooking.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>Does Planned have recipe categories and subfolders?</strong> Yes! Recipes are organized into main categories and subfolders. For example, within “Dinner,” you’ll find subfolders like “Chicken Dinners” to help you quickly locate recipes.
+                <strong>Does Planned have recipe categories and subfolders?</strong> Yes! Recipes are organized into main categories and subfolders. For example, within “Dinner,” you&rsquo;ll find subfolders like “Chicken Dinners” to help you quickly locate recipes.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
@@ -52,11 +52,11 @@ const FAQ: React.FC = () => {
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>Will Planned release more features in the future?</strong> Yes! We’re continuously working on new features. If there are any feature ideas you have that will make your life easier, please tell us at <a href="mailto:support@joinplanned.com" className="text-blue-600 hover:underline">support@joinplanned.com</a>!
+                <strong>Will Planned release more features in the future?</strong> Yes! We&rsquo;re continuously working on new features. If there are any feature ideas you have that will make your life easier, please tell us at <a href="mailto:support@joinplanned.com" className="text-blue-600 hover:underline">support@joinplanned.com</a>!
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>How often are new recipes added?</strong> Claire and the team regularly add new recipes, at least once per month, so you’ll always have fresh options to explore.
+                <strong>How often are new recipes added?</strong> Claire and the team regularly add new recipes, at least once per month, so you&rsquo;ll always have fresh options to explore.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
@@ -68,11 +68,11 @@ const FAQ: React.FC = () => {
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>What do I do if I have allergies?</strong> We provide clear ingredient lists, but it’s each user’s responsibility to review recipes for potential allergens. For serious allergies, consult a healthcare professional.
+                <strong>What do I do if I have allergies?</strong> We provide clear ingredient lists, but it&rsquo;s each user&rsquo;s responsibility to review recipes for potential allergens. For serious allergies, consult a healthcare professional.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>What should I do if I experience an issue with my Instacart order?</strong> Since Instacart is a third-party service, direct any issues with orders to Instacart’s customer support. Planned cannot resolve Instacart-related issues.
+                <strong>What should I do if I experience an issue with my Instacart order?</strong> Since Instacart is a third-party service, direct any issues with orders to Instacart&rsquo;s customer support. Planned cannot resolve Instacart-related issues.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
@@ -84,7 +84,7 @@ const FAQ: React.FC = () => {
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>How secure is my information on Planned?</strong> We prioritize your privacy and use robust security measures. Payment information is securely handled by Stripe, and we don’t retain it. Personal information is used solely to improve our services.
+                <strong>How secure is my information on Planned?</strong> We prioritize your privacy and use robust security measures. Payment information is securely handled by Stripe, and we don&rsquo;t retain it. Personal information is used solely to improve our services.
             </p>
         </div>
     );
