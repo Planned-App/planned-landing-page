@@ -56,24 +56,9 @@ const WhatsIncluded: NextPage<{}> = () => {
                 </ul>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Monthly Membership */}
+                    {/* Yearly Membership - Displayed first on mobile */}
                     <div
-                        className={`relative p-6 border-4 ${selectedPlan === 'monthly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer`}
-                        onClick={() => handlePlanChange('monthly')}
-                    >
-                        {selectedPlan === 'monthly' && (
-                            <Image src={checkIcon} alt="Selected check icon" width={20} height={20} className="absolute top-2 left-2" />
-                        )}
-
-                        <h3 className="font-bold text-[#1E4D38] mb-2">MONTHLY MEMBERSHIP</h3>
-                        <p className="text-4xl font-bold text-[#1E4D38]">$12</p>
-                        <p className={`mb-4 font-bold ${selectedPlan === 'monthly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
-                        <p className="text-sm text-[#1E4D38]">Billed monthly at $12, cancel anytime.</p>
-                    </div>
-
-                    {/* Yearly Membership */}
-                    <div
-                        className={`relative p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer mt-10 md:mt-0`}
+                        className={`relative p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer order-1 md:order-2`}
                         onClick={() => handlePlanChange('yearly')}
                     >
                         <div className="absolute top-[-1.125rem] right-[-0.1875rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
@@ -87,6 +72,20 @@ const WhatsIncluded: NextPage<{}> = () => {
                         <p className="text-4xl font-bold text-[#1E4D38]">$5.83</p>
                         <p className={`mb-4 font-bold ${selectedPlan === 'yearly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
                         <p className="text-sm text-[#1E4D38]">Billed annually at $69, cancel anytime.</p>
+                    </div>
+
+                    {/* Monthly Membership - Displayed second on mobile */}
+                    <div
+                        className={`relative p-6 border-4 ${selectedPlan === 'monthly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer order-2 md:order-1`}
+                        onClick={() => handlePlanChange('monthly')}
+                    >
+                        {selectedPlan === 'monthly' && (
+                            <Image src={checkIcon} alt="Selected check icon" width={20} height={20} className="absolute top-2 left-2" />
+                        )}
+                        <h3 className="font-bold text-[#1E4D38] mb-2">MONTHLY MEMBERSHIP</h3>
+                        <p className="text-4xl font-bold text-[#1E4D38]">$12</p>
+                        <p className={`mb-4 font-bold ${selectedPlan === 'monthly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
+                        <p className="text-sm text-[#1E4D38]">Billed monthly at $12, cancel anytime.</p>
                     </div>
                 </div>
 

@@ -28,8 +28,38 @@ import image21 from '../../../../public/footer-carousel/footer-carouse-21.png'
 
 import styles from './Carousel.module.css';
 
+const scrollToJoinNow = () => {
+    const targetElement = document.getElementById("join-now");
+    if (!targetElement) return;
 
-const GetStarted: NextPage<{}> = () => {
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Duration in milliseconds (1 second)
+    let startTime: number | null = null;
+
+    function animation(currentTime: number) {
+        if (startTime === null) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const scrollProgress = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+
+        window.scrollTo(0, scrollProgress);
+
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    // Easing function for smoother scroll animation
+    function easeInOutQuad(t: number, b: number, c: number, d: number) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+};
+
+const GetStartedCarousel: NextPage<{}> = () => {
 
 
     const partners = [
@@ -96,7 +126,7 @@ const GetStarted: NextPage<{}> = () => {
                     </div>
                 </div>
                 <h2 className="text-2xl font-bold my-8"> <span className='!text-[#E1E6C8]'>plus </span>NEW RECIPES  <span className='!text-[#E1E6C8]'> added </span>WEEKLY!</h2>
-                <Button className='!bg-[#E1E6C8] !text-[#1E4D38] !rounded-3xl !px-14 !py-4 sm:!py-6 !font-poppins !text-base sm:!text-lg !font-bold !border-4 !border-[#FFFFFF] mb-8'>
+                <Button onClick={scrollToJoinNow} href="#join-now" className='!bg-[#E1E6C8] !text-[#1E4D38] !rounded-3xl !px-14 !py-4 sm:!py-6 !font-poppins !text-base sm:!text-lg !font-bold !border-4 !border-[#FFFFFF] mb-8'>
                     JOIN NOW
                 </Button>
             </div>
@@ -108,4 +138,4 @@ const GetStarted: NextPage<{}> = () => {
     );
 }
 
-export default GetStarted;
+export default GetStartedCarousel;

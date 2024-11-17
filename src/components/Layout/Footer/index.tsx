@@ -28,6 +28,9 @@ const Footer: React.FC = () => {
                     <Link href="/acceptable-user-policy" className="text-base md:text-xl hover:underline">
                         ACCEPTABLE USE POLICY
                     </Link>
+                    <Link href="/faq" className="text-base md:text-xl hover:underline">
+                        FAQ
+                    </Link>
                     <a href="mailto:support@joinplanned.com" className="text-base md:text-xl hover:underline">
                         CONTACT
                     </a>
