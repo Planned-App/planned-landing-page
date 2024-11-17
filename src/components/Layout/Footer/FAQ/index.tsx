@@ -16,7 +16,7 @@ const FAQ: React.FC = () => {
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>How does the grocery list work?</strong> Planned&rsquo;s grocery list automatically compiles all the ingredients you need for your weekly plan, organizing them in an easy-to-follow list. You can also add extra items to your list if you wish to get things other than what's on your meal plan. For added convenience, Planned offers grocery delivery through Instacart and other integrations, saving you time and ensuring you have everything for your planned meals. You may organize the grocery list by date range if you rather shop for a few days at once rather than for a whole week.
+                <strong>How does the grocery list work?</strong> Planned&rsquo;s grocery list automatically compiles all the ingredients you need for your weekly plan, organizing them in an easy-to-follow list. You can also add extra items to your list if you wish to get things other than what&rsquo;s on your meal plan. For added convenience, Planned offers grocery delivery through Instacart and other integrations, saving you time and ensuring you have everything for your planned meals. You may organize the grocery list by date range if you rather shop for a few days at once rather than for a whole week.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
@@ -36,7 +36,7 @@ const FAQ: React.FC = () => {
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
-                <strong>Can I use Planned without the meal plan feature?</strong> Yes, even if you&rsquo;re not using the meal plan, you&rsquo;ll have access to all recipes anytime with cooking instructions. Browse the collection and choose what you want to make for dinner! We also have a feature called ‘cooking mode&rsquo; which ensures your phone screen will stay on while you're cooking.
+                <strong>Can I use Planned without the meal plan feature?</strong> Yes, even if you&rsquo;re not using the meal plan, you&rsquo;ll have access to all recipes anytime with cooking instructions. Browse the collection and choose what you want to make for dinner! We also have a feature called &rsquo;cooking mode&rsquo; which ensures your phone screen will stay on while you&rsquo;re cooking.
             </p>
 
             <p className="mb-4 text-base md:text-lg text-justify">
