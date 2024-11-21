@@ -13,6 +13,7 @@ const config: Config = {
       },
       backgroundImage: {
         'hero': "url('/hero-section.png')",
+        'hero-mobile': "url('/bg-mobile.png')",
 
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

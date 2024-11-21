@@ -41,14 +41,16 @@ const NavbarComponent: NextPage<{}> = () => {
                     <div className='w-full flex items-center justify-between px-4 md:px-8 lg:px-16 py-2.5'>
                         <div className='flex items-center'>
                             <Link href='/'>
-                                <Image
-                                    src={logo}
-                                    width={270}
-                                    alt='Planned Logo'
-                                    layout='intrinsic' // Adjust layout as needed (e.g., 'fixed', 'responsive')
-                                    className='lg:mr-16 cursor-pointer'
-                                    priority // Optional: Use `priority` for images that are critical to the UI
-                                />
+                                <div className='relative w-48 lg:w-64'>
+                                    <Image
+                                        src={logo}
+                                        width={270}
+                                        alt='Planned Logo'
+                                        layout='intrinsic' // Adjust layout as needed (e.g., 'fixed', 'responsive')
+                                        className='lg:mr-16 cursor-pointer'
+                                        priority // Optional: Use `priority` for images that are critical to the UI
+                                    />
+                                </div>
                             </Link>
                         </div>
                     </div>

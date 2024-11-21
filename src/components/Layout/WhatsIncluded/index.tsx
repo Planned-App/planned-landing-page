@@ -42,7 +42,7 @@ const WhatsIncluded: NextPage<{}> = () => {
         : 'https://buy.stripe.com/test_00gdSAeFbaF5fu09AB';
     return (
         <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
-            <h2 className="text-3xl font-bold text-[#1E4D38] mb-8 text-center">Get Started Today</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-8 text-center">get started today</h2>
             <div className="bg-white border-4 border-[#1E4D38] px-6 py-6 md:px-16 md:pb-10 md:pt-16 rounded-lg w-full max-w-4xl">
                 <ul className="space-y-3 md:space-y-4 text-[#000000] text-base md:text-xl font-medium pb-16">
                     {contentSelectedPlan.map((text, index) => (

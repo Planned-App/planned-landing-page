@@ -74,14 +74,15 @@ const testimonials: Testimonial[] = [
 const Testimonials: React.FC = () => {
     return (
         <section className="w-full bg-white py-16 flex flex-col items-center relative">
-            <h2 className="text-3xl font-bold text-[#1E4D38] mb-8 text-center">What Customers Are Saying</h2>
-            <div className="w-full bg-[#F4F6F0] relative flex items-center justify-center px-6 py-6 ">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-8 text-center">what customers are saying</h2>
+            <div className="w-full bg-[#fff] relative flex items-center justify-center px-6 py-6 ">
                 <Swiper
+                    autoHeight={true}
                     spaceBetween={20}
                     slidesPerView={1}
-                    cssMode={true}
+                    // cssMode={true}
                     navigation={true}
-                    pagination={true}
+                    // pagination={true}
                     mousewheel={true}
                     keyboard={true}
                     // pagination={{
@@ -89,11 +90,11 @@ const Testimonials: React.FC = () => {
                     //     dynamicBullets: true,
                     // }}
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                    className="mySwiper h-auto"
+                    className="mySwiper"
                 >
                     {testimonials.map(({ id, title, text, author, image }) => (
                         <SwiperSlide key={id} className="flex justify-center items-center">
-                            <div className="hidden lg:flex md:flex-row flex-col items-center bg-[#F4F6F0] mx-auto p-6 md:pl-16 lg:px-20 xl:px-60 py-6 md:py-8 lg:py-14 xl:py-20 lg:w-full relative">
+                            <div className="hidden lg:flex md:flex-row flex-col items-center bg-[#fff] mx-auto p-6 md:pl-16 lg:px-20 xl:px-60 pt-6 md:py-8 lg:pt-14 xl:pt-20 lg:w-full relative">
                                 <Image
                                     src={image}
                                     alt={author}
@@ -109,7 +110,7 @@ const Testimonials: React.FC = () => {
                                 <div className="swiper-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2"></div>
                             </div>
 
-                            <div className="lg:hidden col-span-12 flex flex-col border-4 border-[#1e4d38] p-7 m-4 bg-[#E1E6C8] text-white rounded-[30px]">
+                            <div className="lg:hidden col-span-12 flex flex-col  border-4 border-[#1e4d38] p-7 mt-4 mx-4 bg-[#E1E6C8] text-white rounded-[30px]">
                                 <div className="w-full flex justify-center">
                                     <Image
                                         src={image}
@@ -131,6 +132,7 @@ const Testimonials: React.FC = () => {
                     ))}
                 </Swiper>
             </div>
+            
         </section>
     );
 };
