@@ -52,7 +52,7 @@ const HeroSection: React.FC = () => {
                 </div>
                 <div className='flex flex-col items-center justify-center min-h-[calc(73vh)] lg:min-h-[calc(75vh)] text-center'>
                     <div className='mb-4 mt'>
-                        <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy eating</p>
+                        <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy cooking</p>
                         <div className='relative inline-block'>
                             {/* lg and up */}
                             <Image
@@ -91,11 +91,15 @@ const HeroSection: React.FC = () => {
                                     alt="task-icon"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    className="w-10 h-10 md:w-20 md:h-20"
                                 />
                             </div>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
-                                Healthy recipe
+                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
+                                Healthy recipes
+                            </p>
+                            {/* For md and down */}
+                            <p className="text-[#1E4D38] font-poppins text-md lg:text-xl font-semibold md:block lg:hidden">
+                                Healthy <br /> recipes
                             </p>
                             <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
                                 Use the planned-for-you weekly <br /> meal plan or build your own
@@ -110,11 +114,15 @@ const HeroSection: React.FC = () => {
                                     alt="planned-logo"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    className="w-10 h-10 md:w-20 md:h-20"
                                 />
                             </div>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
+                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
                                 Meal planning
+                            </p>
+                            {/* For md and down */}
+                            <p className="text-[#1E4D38] font-poppins text-md lg:text-xl font-semibold md:block lg:hidden">
+                                Meal <br /> planning
                             </p>
                             <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
                                 Automatically generate your weekly <br /> grocery list & shop online or in store
@@ -129,11 +137,15 @@ const HeroSection: React.FC = () => {
                                     alt="food-icon"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    className="w-10 h-10 md:w-20 md:h-20"
                                 />
                             </div>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
+                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
                                 Grocery shopping
+                            </p>
+                            {/* For md and down */}
+                            <p className="text-[#1E4D38] font-poppins text-md lg:text-xl font-semibold md:block lg:hidden">
+                                Grocery <br /> shopping
                             </p>
                             <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
                                 Access to 500+ healthy recipes <br /> that the whole family will love
