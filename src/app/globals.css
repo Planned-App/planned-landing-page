@@ -82,3 +82,19 @@ span.swiper-pagination {
   /* word-break: break-word; */
   /* text-align: center; */
 }
+/* .swiper-wrapper {
+  margin: 0 !important; 
+  padding: 0 !important; 
+} */
+
+
+.swiper {
+  height: auto !important;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
