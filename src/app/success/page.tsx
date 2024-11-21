@@ -16,16 +16,16 @@ const SuccessPage: React.FC = () => {
       {/* Main content wrapper */}
       <div className="flex flex-col items-center justify-center flex-grow">
         {/* Main message */}
-        <p className="text-2xl md:text-5xl lg:text-[3.75rem] font-bold text-[#1E4D38] mb-4 md:mb-6 lg:mb-8">
-          Thank you so much for
+        <p className="text-2xl md:text-5xl lg:text-[66px] font-bold text-[#1E4D38] mb-4 md:mb-6 lg:mb-8">
+          Welcome to Planned!
         </p>
-        <p className="text-2xl md:text-5xl lg:text-[3.75rem] font-bold text-[#1E4D38] mb-6 md:mb-10 lg:mb-12">
-          choosing to join Planned!
+        <p className="text-2xl md:text-5xl lg:text-[37px] font-bold text-[#1E4D38] mb-6 md:mb-10 lg:mb-12 underline">
+          Your App Login Info is in your email inbox.
         </p>
-        <p className="text-base font-bold md:text-2xl lg:text-[2.25rem] text-[#1E4D38] mb-4 md:mb-6 lg:mb-8">
+        <p className="text-base font-bold md:text-2xl lg:text-[30px] text-[#1E4D38] mb-0 md:mb-6 lg:mb-8">
           Please click below to download the app
         </p>
-        <p className="text-base font-bold md:text-2xl lg:text-[2.25rem] text-[#1E4D38] mb-6 md:mb-10 lg:mb-12">
+        <p className="text-base font-bold md:text-2xl lg:text-[30px] text-[#1E4D38] mb-6 md:mb-10 lg:mb-12">
           and get started!
         </p>
 
@@ -66,7 +66,7 @@ const SuccessPage: React.FC = () => {
       </div>
 
       {/* Footer message at the bottom */}
-      <p className="text-base md:text-2xl lg:text-3xl text-[#1E4D38] mb-4">
+      <p className="text-base md:text-2xl lg:text-3xl text-[#1E4D38] mb-4 font-bold">
         All the details are also in your email inbox!
       </p>
     </section>
