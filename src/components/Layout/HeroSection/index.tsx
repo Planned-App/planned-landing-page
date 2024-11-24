@@ -44,11 +44,11 @@ const HeroSection: React.FC = () => {
 
 
     const classNameForText = "text-[#1E4D38] font-poppins lg:text-md font-semibold hidden lg:block"
-    const classNameForTheIcon = "w-10 h-10 md:w-14 md:h-14 lg:h-10 lg:w-h-10"
+    const classNameForTheIcon = "w-10 h-10 sm:h-7 sm:w-7  md:w-14 md:h-14 lg:h-10 lg:w-h-10"
     return (
         <>
             {/* <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero bg-center bg-no-repeat bg-cover h-fit'> */}
-            <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] '>
+            <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-110px_top_-12px] '>
 
                 <div>
                     <HeaderMenu />
@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
                                 src={drawingCircle}
                                 alt="circle"
                                 layout='intrinsic'
-                                className="lg:hidden absolute top-[-36px] right-[-70px] sm:top-[-43px] sm:right-[-40px] h-auto pointer-events-none w-[300px]"
+                                className="lg:hidden absolute top-[-27px] right-[-33px] md:top-[-43px] md:right-[-38px] h-auto pointer-events-none w-[200px] md:w-[300px] "
                             />
                             <p className='z-10 inline-block text-4xl sm:text5xl  md:text-6xl lg:text-7xl font-bold text-[#1E4D38] relative'>
                                 made simple.
@@ -101,7 +101,7 @@ const HeroSection: React.FC = () => {
                                 Healthy recipes
                             </p>
                             {/* For md and down */}
-                            <p className="text-[#1E4D38] font-poppins text-md lg:text-xl font-semibold md:block lg:hidden">
+                            <p className="text-[#1E4D38] font-poppins text-md sm:text-sm lg:text-xl font-semibold md:block lg:hidden">
                                 Healthy <br /> recipes
                             </p>
 
@@ -125,7 +125,7 @@ const HeroSection: React.FC = () => {
                                 Meal planning
                             </p>
                             {/* For md and down */}
-                            <p className="text-[#1E4D38] font-poppins text-md lg:text-xl font-semibold md:block lg:hidden">
+                            <p className="text-[#1E4D38] font-poppins text-md sm:text-sm lg:text-xl font-semibold md:block lg:hidden">
                                 Meal <br /> planning
                             </p>
                             <p className={classNameForText}>
@@ -148,11 +148,11 @@ const HeroSection: React.FC = () => {
                                 Grocery shopping
                             </p>
                             {/* For md and down */}
-                            <p className="text-[#1E4D38] font-poppins text-md lg:text-xl font-semibold md:block lg:hidden">
+                            <p className="text-[#1E4D38] font-poppins text-md  sm:text-sm lg:text-xl font-semibold md:block lg:hidden">
                                 Grocery <br /> shopping
                             </p>
                             <p className={classNameForText}>
-                                Access to 500+ healthy recipes <br /> that the whole family will love
+                                Access to 250+ healthy recipes <br /> that the whole family will love
                             </p>
                         </div>
                     </div>
