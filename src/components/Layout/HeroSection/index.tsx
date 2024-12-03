@@ -81,6 +81,7 @@ const HeroSection: React.FC = () => {
                         <p className='text-sm lg:text-lg font-bold text-[#1E4D38]'>grocery list, shop & enjoy!</p>
                     </div>
 
+
                     <Button onClick={scrollToJoinNow} href="#join-now" className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>Get started</Button>
                 </div>
 
