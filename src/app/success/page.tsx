@@ -32,7 +32,7 @@ const SuccessPage: React.FC = () => {
         {/* App Store Links */}
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-6 items-center">
           {/* Android App Link */}
-          <a
+          {/* <a
             href="https://play.google.com/store" // Replace with your actual Play Store link
             target="_blank"
             rel="noopener noreferrer"
@@ -45,11 +45,11 @@ const SuccessPage: React.FC = () => {
               height={50}
               className="w-40 h-auto sm:w-44 md:w-48 lg:w-56"
             />
-          </a>
+          </a> */}
 
           {/* Apple App Link */}
           <a
-            href="https://www.apple.com/app-store/" // Replace with your actual App Store link
+            href="https://apps.apple.com/us/app/planned-healthy-meal-planning/id6714478797" // Replace with your actual App Store link
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center"
