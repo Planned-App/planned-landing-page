@@ -11,6 +11,17 @@ const config: Config = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      colors: {
+        pink: {
+          200: '#FFECFA', 
+          600: '#D04477', 
+          "title": '#A91A4E',
+
+        },
+      },
+      borderRadius: {
+        'full': '9999px',
+      },
       backgroundImage: {
         'hero': "url('/hero-section.png')",
         'hero-mobile': "url('/bg-mobile.png')",

@@ -7,16 +7,19 @@ import FooterCarousel from '@/components/Layout/FooterCarousel';
 import WhatsIncluded from '@/components/Layout/WhatsIncluded';
 import TestimonialsCarousel from '@/components/Layout/TestimonialsCarousel';
 import Footer from '@/components/Layout/Footer';
+import AutoPlayVideoComponent from '@/components/VideoElement/AutoPlayVideoComponent';
+import VideoContent from '@/components/Layout/VideoContent';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
       <HowItWorks />
-      <GetStarted />
-      <TestimonialsCarousel />
-      {/* <Testimonials /> */}
       <WhatsIncluded />
+      
+      <TestimonialsCarousel />
+      <VideoContent/>
+      <GetStarted />
       <FooterCarousel />
       <Footer />
     </>
