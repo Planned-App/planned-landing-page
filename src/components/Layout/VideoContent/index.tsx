@@ -1,26 +1,26 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import type { NextPage } from 'next';
-import { Button } from 'antd';
-import Image from 'next/image';
-import arrowIcon from '../../../../public/arrow-icon-pointer.png';
-import checkIcon from '../../../../public/check-icon.png';
-import checkIconList from '../../../../public/check.svg'
-import SpringBonusComponent from "@/components/SpringBonus/SpringBonusComponent";
 import AutoPlayVideoComponent from "@/components/VideoElement/AutoPlayVideoComponent";
 
 
-const getVideoSrc = () => {
-    const screenWidth = window.innerWidth;
-    return screenWidth > 768
-        ? "https://planned-app.s3.us-west-1.amazonaws.com/landing-page/planned-demo-desktop-video.mp4"
-        : "https://planned-app.s3.us-west-1.amazonaws.com/landing-page/planned-mobile-version.mp4";
-}
 const VideoContent: NextPage<{}> = () => {
 
-    const [videoSrc, setVideoSrc] = useState(getVideoSrc());
+    const [videoSrc, setVideoSrc] = useState("");
 
     useEffect(() => {
+        // Function to determine the video source based on the window width
+        const getVideoSrc = () => {
+            const screenWidth = window.innerWidth;
+            return screenWidth > 768
+                ? "https://planned-app.s3.us-west-1.amazonaws.com/landing-page/planned-demo-desktop-video.mp4"
+                : "https://planned-app.s3.us-west-1.amazonaws.com/landing-page/planned-mobile-version.mp4";
+        };
+
+        // Update the videoSrc state based on the current window size
+        setVideoSrc(getVideoSrc());
+
+        // Handle window resize to update the video source dynamically
         function handleResize() {
             setVideoSrc(getVideoSrc());
         }
@@ -30,6 +30,7 @@ const VideoContent: NextPage<{}> = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
 
     return (
         <>
