@@ -9,6 +9,7 @@ import drawingCircle from '../../../../public/drawing-circle.png';
 import taskIcon from '../../../../public/task-icon.svg';
 import plannedLogo from '../../../../public/cart-outline.svg';
 import foodIcon from '../../../../public/food-icon.svg';
+import SpringBonusBanner from '@/components/SpringBonus/SpringBonusBanner';
 
 const scrollToJoinNow = () => {
     const targetElement = document.getElementById("join-now");
@@ -48,7 +49,8 @@ const HeroSection: React.FC = () => {
             <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] '>
 
                 <div>
-                    <HeaderMenu />
+                    {/* <HeaderMenu /> */}
+                    <SpringBonusBanner />
                 </div>
                 <div className='flex flex-col items-center justify-center min-h-[calc(73vh)] lg:min-h-[calc(75vh)] text-center'>
                     <div className='mb-4 mt'>

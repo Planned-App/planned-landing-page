@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                     <div className="w-10 h-10">
                         <Image src={logo} alt="Logo" layout="responsive" width={40} height={40} className="rounded-md" />
                     </div>
-                    <p className="text-base md:text-xl text-[#1E4D38]">© 2024, Planned.</p>
+                    <p className="text-base md:text-xl text-[#1E4D38]">© 2024, PLANNED LLC.</p>
                     <p className="text-base md:text-xl text-[#1E4D38]">All Rights Reserved</p>
                 </div>
 
