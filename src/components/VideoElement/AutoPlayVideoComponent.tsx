@@ -79,7 +79,7 @@ const AutoPlayVideoComponent: React.FC<AutoPlayVideoProps> = ({ src, poster }) =
         muted={!hasPlayed} 
         // muted={false}  // Initially muted, unmute after first play
       >
-        Sorry, your browser doesn't support embedded videos.
+        Sorry, your browser doesn&rsquo;t support embedded videos.
       </video>
       {!hasPlayed && isIntersecting && (
           // <div style={{
