@@ -32,9 +32,9 @@ const SpringBonusBanner: React.FC = () => {
                 <div className="w-3/4 bg-yellow-500 h-12"> 123123</div>
                 <div className="w-1/4 bg-yellow-400 h-12">12312</div>
             </div> */}
-            <div className="flex flex-col items-center justify-center py-6 px-[51px]">
+            <div className="flex flex-col items-center justify-center py-6 md:px-[3.1875rem] px-[25px]">
                 <div className="text-[#CC2060] font-bold text-lg mb-2">
-                    <span className="px-2 text-[34px] font-poppins font-semibold italic">🌸 SPRING BONUS 🌸</span>
+                    <span className="px-2 text-[28px] md:text-[34px] font-poppins font-semibold italic">🌸 SPRING BONUS 🌸</span>
                 </div>
 
                 <div className="text-sm md:text-md font-normal text-[#A91A4E] font-poppins justify-center text-center">
