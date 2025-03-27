@@ -48,12 +48,16 @@ const Testimonial: React.FC<TestimonialProps> = ({ rating, title, content, autho
                             <h2 className="text-xl font-bold mb-2">{title}</h2>
                             <p className="text-sm text-[#1E4D38] max">{content}</p>
                         </div>
-                        <div>
+                       
+                            <div>
                             <p className="italic text-base font-bold mt-2">{author}</p>
+                            {reviewLink &&
                             <a href={reviewLink} className="text-blue-500 hover:underline text-xs">
                                 (Full review on the app store)
                             </a>
+                                 }
                         </div>
+                   
                     </div>
 
                     :
@@ -67,12 +71,13 @@ const Testimonial: React.FC<TestimonialProps> = ({ rating, title, content, autho
                                 </div>
                                 <p className="my-6 text-base font-normal font-poppins">{content}</p>
                             </div>
+                            {reviewLink &&
                             <div>
-
                                 <p className="text-2xl font-bold">{author} <a href={reviewLink} className="text-blue-500 hover:underline italic">
                                     (Full review on the app store)
                                 </a></p>
                             </div>
+                            }
                         </div>
                     </>
                 }

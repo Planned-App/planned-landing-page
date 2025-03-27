@@ -20,6 +20,7 @@ interface Testimonial {
     text: string;
     author: string;
     image: string; // URL for the image
+    reviewLink?: string
 }
 
 const testimonials: Testimonial[] = [
@@ -28,6 +29,7 @@ const testimonials: Testimonial[] = [
         text: `"Planned is one of the best purchases I made this year. Each week I used to spend so much time scrolling through Pinterest recipes looking for something my family would enjoy so I decided to purchase a Planned subscription and I absolutely love it. If you are looking for an easy-to-use platform with meals the whole family will love, then Planned is for you! Even my 2-year-old loves the recipes! She's eaten every single one!"`,
         author: "-BrimMel88",
         image: image1.src,
+        reviewLink: `https://apps.apple.com/ph/app/planned-healthy-meal-planning/id6714478797`
     },
     {
         title: "Busy Moms Need Planned!",
@@ -93,14 +95,14 @@ const Testimonials: React.FC = () => {
                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                     className="mySwiper"
                 >
-                    {testimonials.map(({ title, text, author, image } , index) => (
+                    {testimonials.map(({ title, text, author, image, reviewLink = '' } , index) => (
                         <SwiperSlide key={index + 1} className="flex justify-center items-center">
                             <Testimonial
                                 rating={5}
                                 title={title}
                                 content={text}
                                 author={author}
-                                reviewLink="#"
+                                reviewLink={reviewLink}
                             />
                             {/* <div className="hidden lg:flex md:flex-row flex-col items-center bg-[#fff] mx-auto p-6 md:pl-16 lg:px-20 xl:px-60 pt-6 md:py-8 lg:pt-14 xl:pt-20 lg:w-full relative">
                                 <Image
