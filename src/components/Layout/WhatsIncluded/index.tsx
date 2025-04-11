@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import type { NextPage } from 'next';
 import { Button } from 'antd';
 import Image from 'next/image';
@@ -11,62 +11,62 @@ import SpringBonusComponent from "@/components/SpringBonus/SpringBonusComponent"
 const monthlyContent = [
     {
         title: "Personalized Meal Planning",
-        content: "",
+        content: "Follow our weekly planned-for-you dinner menu or build your own fully customized plan.",
     },
     {
         title: "Access 300+ Healthy & Delicious Recipes",
-        content: "",
+        content: "With new meals added every month!",
     },
     {
         title: "Calorie & Macros Included",
-        content: "",
+        content: "Every recipe comes with full nutritional details",
     },
     {
         title: "Flexible Meal Customization",
-        content: "",
+        content: "Swap ingredients to fit your preferences and adjust serving sizes",
     },
     {
         title: "Smart Grocery List Generation",
-        content: "",
+        content: "Instantly create and organize your shopping list.",
     },
     {
         title: "Grocery Delivery",
-        content: "",
+        content: "Order your groceries straight to your door in just a few clicks through our Instacart integration.",
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "",
+        content: "Entered to win my favorite kitchen essentials every month!",
     },
 ];
 
 const yearlyContent = [
     {
         title: "Personalized Meal Planning",
-        content: "",
+        content: "Follow our weekly planned-for-you dinner menu or build your own fully customized plan.",
     },
     {
         title: "Access 300+ Healthy & Delicious Recipes",
-        content: "",
+        content: "With new meals added every month!",
     },
     {
         title: "Calorie & Macros Included",
-        content: "",
+        content: "Every recipe comes with full nutritional details",
     },
     {
         title: "Flexible Meal Customization",
-        content: "",
+        content: "Swap ingredients to fit your preferences and adjust serving sizes",
     },
     {
         title: "Smart Grocery List Generation",
-        content: "",
+        content: "Instantly create and organize your shopping list.",
     },
     {
         title: "Grocery Delivery",
-        content: "",
+        content: "Order your groceries straight to your door in just a few clicks through our Instacart integration.",
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "",
+        content: "Entered to win my favorite kitchen essentials every month!",
     },
 ];
 
@@ -80,6 +80,22 @@ const WhatsIncluded: NextPage<{}> = () => {
         setSelectedPlan(plan);
         setContentSelectedPlan(plan === 'monthly' ? monthlyContent : yearlyContent);
     };
+
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const isNowMobile = window.innerWidth <= 768;
+            setIsMobile(isNowMobile);
+
+        };
+
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+    }, []);
 
     // Define URLs for each plan type
     const joinNowUrl = selectedPlan === 'monthly'
@@ -95,7 +111,10 @@ const WhatsIncluded: NextPage<{}> = () => {
                             <picture className="flex-shrink-0">
                                 <img src={checkIconList.src} alt="check" className="w-5 h-5 md:w-6 md:h-6" />
                             </picture>
-                            <span className="ml-3 md:ml-4 flex-1 text-base md:text-[16px] font-poppins"><span className="font-bold">{text.title}:</span> {text.content}</span>
+                            <span className="ml-3 md:ml-4 flex-1 text-base md:text-[16px] font-poppins">
+                                <span className="font-bold">{text.title}</span>
+                                {!isMobile && <span>: {text.content}</span>}
+                            </span>
                         </li>
                     ))}
                 </ul>
