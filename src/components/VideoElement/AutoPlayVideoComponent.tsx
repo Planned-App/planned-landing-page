@@ -8,11 +8,34 @@ interface AutoPlayVideoProps {
 
 const AutoPlayVideoComponent: React.FC<AutoPlayVideoProps> = ({ src, poster }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
- const [isIntersecting, setIsIntersecting] = useState(false);
-  const [hasPlayed, setHasPlayed] = useState(false); 
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
 
   const [videoHeight, setVideoHeight] = useState('64');
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      const isNowMobile = window.innerWidth <= 768;
+      setIsMobile(isNowMobile);
+
+      if (!isNowMobile) {
+        const screenHeight = window.innerHeight;
+        const calculatedHeight = Math.round(screenHeight / 4);
+        // setVideoHeight(`${calculatedHeight}`);
+      }
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkIsMobile);
+    };
+  }, []);
+
+  console.log('isMobile',isMobile)
   useEffect(() => {
     function updateVideoHeight() {
       const screenHeight = window.innerHeight;
@@ -68,40 +91,48 @@ const AutoPlayVideoComponent: React.FC<AutoPlayVideoProps> = ({ src, poster }) =
   };
 
   return (
-    <div className={`relative w-full h-[${videoHeight}px]`}>
+    <div className={`relative w-full  h-[${videoHeight}px]`}
+    style={
+      isMobile
+        ? {
+            width: '398px',
+            height: '707.56px',
+          }
+        : undefined
+    }>
       <video
         // autoPlay={hasPlayed}
         ref={videoRef}
         src={src}
         poster={poster}
         controls
-        style={{ width: '100%', height: '100%' }} 
-        muted={!hasPlayed} 
-        // muted={false}  // Initially muted, unmute after first play
+        style={{ width: '100%', height: '100%' }}
+        muted={!hasPlayed}
+      // muted={false}  // Initially muted, unmute after first play
       >
         Sorry, your browser doesn&rsquo;t support embedded videos.
       </video>
       {!hasPlayed && isIntersecting && (
-          // <div style={{
-          //   position: 'absolute',
-          //   top: 0,
-          //   left: 0,
-          //   width: '100%',
-          //   height: '100%',
-          //   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          //   display: 'flex',
-          //   justifyContent: 'center',
-          //   alignItems: 'center',
-          //   zIndex: 10
-          // }}>
-          //   <button onClick={handlePlayVideo} className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-3 !font-poppins !text-lg font-bold mt-[2.1875rem]' style={{
-          //     border: 'none', 
-          //     cursor: 'pointer'
-          //   }}>
-          //     Play Video
-          //   </button>
-          // </div>
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        // <div style={{
+        //   position: 'absolute',
+        //   top: 0,
+        //   left: 0,
+        //   width: '100%',
+        //   height: '100%',
+        //   backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        //   display: 'flex',
+        //   justifyContent: 'center',
+        //   alignItems: 'center',
+        //   zIndex: 10
+        // }}>
+        //   <button onClick={handlePlayVideo} className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-3 !font-poppins !text-lg font-bold mt-[2.1875rem]' style={{
+        //     border: 'none', 
+        //     cursor: 'pointer'
+        //   }}>
+        //     Play Video
+        //   </button>
+        // </div>
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
           <button onClick={handlePlayVideo} className="bg-[#1E4D38] text-white rounded-lg px-4 py-2 text-lg font-bold">
             Play Video
           </button>

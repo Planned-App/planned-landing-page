@@ -85,7 +85,7 @@ const testimonials: Testimonial[] = [
 const Testimonials: React.FC = () => {
     return (
         <section className="w-full bg-white py-16 flex flex-col items-center relative">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-8 text-center">what customers are saying</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-4 text-center">customer reviews</h2>
             <div className="w-full bg-[#fff] relative flex items-center justify-center px-6 py-6 ">
                 <Swiper
                     spaceBetween={20}

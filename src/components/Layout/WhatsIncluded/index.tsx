@@ -11,62 +11,62 @@ import SpringBonusComponent from "@/components/SpringBonus/SpringBonusComponent"
 const monthlyContent = [
     {
         title: "Personalized Meal Planning",
-        content: "Follow our weekly planned-for-you dinner menu or build your own fully customized plan.",
+        content: "",
     },
     {
         title: "Access 300+ Healthy & Delicious Recipes",
-        content: "With new meals added every month!",
+        content: "",
     },
     {
         title: "Calorie & Macros Included",
-        content: "Every recipe comes with full nutritional details",
+        content: "",
     },
     {
         title: "Flexible Meal Customization",
-        content: "Swap ingredients to fit your preferences and adjust serving sizes",
+        content: "",
     },
     {
         title: "Smart Grocery List Generation",
-        content: "Instantly create and organize your shopping list.",
+        content: "",
     },
     {
         title: "Grocery Delivery",
-        content: "Order your groceries straight to your door in just a few clicks through our Instacart integration.",
+        content: "",
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "Entered to win my favorite kitchen essentials every month!",
+        content: "",
     },
 ];
 
 const yearlyContent = [
     {
         title: "Personalized Meal Planning",
-        content: "Follow our weekly planned-for-you dinner menu or build your own fully customized plan.",
+        content: "",
     },
     {
         title: "Access 300+ Healthy & Delicious Recipes",
-        content: "With new meals added every month!",
+        content: "",
     },
     {
         title: "Calorie & Macros Included",
-        content: "Every recipe comes with full nutritional details",
+        content: "",
     },
     {
         title: "Flexible Meal Customization",
-        content: "Swap ingredients to fit your preferences and adjust serving sizes",
+        content: "",
     },
     {
         title: "Smart Grocery List Generation",
-        content: "Instantly create and organize your shopping list.",
+        content: "",
     },
     {
         title: "Grocery Delivery",
-        content: "Order your groceries straight to your door in just a few clicks through our Instacart integration.",
+        content: "",
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "Entered to win my favorite kitchen essentials every month!",
+        content: "",
     },
 ];
 
@@ -87,9 +87,9 @@ const WhatsIncluded: NextPage<{}> = () => {
         : 'https://buy.stripe.com/test_00gdSAeFbaF5fu09AB';
     return (
         <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-8 text-center">what’s included...</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-5 text-center">what’s included...</h2>
             <div className="bg-white border-4 border-[#1E4D38] px-6 py-6 md:px-16 md:pb-10 md:pt-16 rounded-[2.25rem] w-full max-w-4xl">
-                <ul className="space-y-3 md:space-y-4 text-[#000000] text-base md:text-xl font-medium pb-2 md:pb-16">
+                <ul className="space-y- md:space-y-4 text-[#000000] text-base md:text-xl font-medium pb-2 md:pb-16">
                     {contentSelectedPlan.map((text, index) => (
                         <li key={index} className="flex items-start">
                             <picture className="flex-shrink-0">

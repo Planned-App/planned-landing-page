@@ -107,7 +107,7 @@ const GetStartedCarousel: NextPage<{}> = () => {
 
             <div className="flex flex-col items-center min-h-24 bg-[#1E4D38] text-white">
                 <h1 className="text-3xl font-bold my-8 text-center">
-                    <span className='!text-[#E1E6C8]'>Join access to</span> HUNDREDS <br />
+                    <span className='!text-[#E1E6C8]'>Join to access</span> HUNDREDS <br />
                     <span className='!text-[#E1E6C8]'> of healthy, delicious recipes!</span>
                 </h1>
                 <div className={`${styles.carouselWrapper} overflow-hidden whitespace-nowrap py-4`}>

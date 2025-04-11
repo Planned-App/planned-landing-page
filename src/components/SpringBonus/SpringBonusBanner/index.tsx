@@ -39,12 +39,16 @@ const SpringBonusBanner: React.FC = () => {
 
                 <div className="text-sm md:text-md font-normal text-[#A91A4E] font-poppins justify-center text-center">
                     <span>
-                        Get <span className='font-bold'>FREE access</span> to our Breakfast, Lunch & Snack Recipes and Seasonal &apos;Cookbook&apos; Folders included with 
+                      <span className='font-bold'>Get Free access to our breakfast, lunch, snack, and seasonal cookbook folders for a limited time!</span>
+
+                    </span>
+                    {/* <span>
+                        Get <span className='font-bold'>FREE access</span> to our Breakfast, Lunch & Snack Recipes and Seasonal &apos;Cookbook&apos; Folders included with{' '}
                         {showBreak && <br />}
                         <span>
                             your membership – for a limited time only! (A $70 value, now included at no extra cost.)
                         </span>
-                    </span>
+                    </span> */}
 
                 </div>
 

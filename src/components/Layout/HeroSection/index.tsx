@@ -46,13 +46,13 @@ const HeroSection: React.FC = () => {
     return (
         <>
             {/* <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero bg-center bg-no-repeat bg-cover h-fit'> */}
-            <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] '>
+            <section className='bg-[#ffff] overflow-hidden w-screen min-h-[88vh] md:min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] '>
 
                 <div>
                     {/* <HeaderMenu /> */}
                     <SpringBonusBanner />
                 </div>
-                <div className='flex flex-col items-center justify-center min-h-[calc(60vh)] lg:min-h-[calc(75vh)] text-center'>
+                <div className='flex flex-col items-center justify-center min-h-[calc(48vh)] md:min-h-[calc(60vh)]  lg:min-h-[calc(75vh)] text-center'>
                     <div className='mb-4 mt'>
                         <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy eating</p>
                         <div className='relative inline-block'>
@@ -93,7 +93,7 @@ const HeroSection: React.FC = () => {
                                     alt="task-icon"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    className="w-12 h-12 md:w-20 md:h-20"
                                 />
                             </div>
                             <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
@@ -112,7 +112,7 @@ const HeroSection: React.FC = () => {
                                     alt="planned-logo"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    className="w-12 h-12 md:w-20 md:h-20"
                                 />
                             </div>
                             <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
@@ -131,7 +131,7 @@ const HeroSection: React.FC = () => {
                                     alt="food-icon"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-16 h-16 md:w-20 md:h-20"
+                                    className="w-12 h-12 md:w-20 md:h-20"
                                 />
                             </div>
                             <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">

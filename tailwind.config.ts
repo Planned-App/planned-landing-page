@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        'screen-adjusted': 'calc(100vh - 64px)' // optional fallback
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },

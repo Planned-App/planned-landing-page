@@ -7,6 +7,21 @@ import AutoPlayVideoComponent from "@/components/VideoElement/AutoPlayVideoCompo
 const VideoContent: NextPage<{}> = () => {
 
     const [videoSrc, setVideoSrc] = useState("");
+      const [isMobile, setIsMobile] = useState(false);
+      useEffect(() => {
+        const checkIsMobile = () => {
+          const isNowMobile = window.innerWidth <= 768;
+          setIsMobile(isNowMobile);
+    
+        };
+    
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+    
+        return () => {
+          window.removeEventListener('resize', checkIsMobile);
+        };
+      }, []);
 
     useEffect(() => {
         // Function to determine the video source based on the window width
@@ -39,7 +54,7 @@ const VideoContent: NextPage<{}> = () => {
             <div>
             <AutoPlayVideoComponent
                     src={videoSrc}
-                    poster="https://example.com/path-to-your-poster-image.jpg"
+                    poster={isMobile ? "/video/mobile-thumbnail.jpg" : "/video/web-thumbnail.png" }
                 />
             </div>
         </section>

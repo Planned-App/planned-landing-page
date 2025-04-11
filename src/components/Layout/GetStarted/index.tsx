@@ -54,7 +54,7 @@ const GetStarted: NextPage<{}> = () => {
                 </div>
 
                 <div className="mt-6 mb-2">
-                    <p className="font-poppins text-[0.75rem] md:text-xl italic font-normal">🎉 Plus our Limited Time Bonus: Get access to our premium breakfast, lunch, snack & seasonal cookbook recipes ($70 value)—FREE with any plan!</p>
+                    <p className="font-poppins text-[0.75rem] md:text-xl italic font-normal text-center">🎉 Plus access our premium breakfast, lunch, snack & seasonal cookbook recipes ($70 value)—FREE with any plan! Offer ends soon.</p>
                 </div>
                 <div className="flex justify-center mb-2">
                     <Button
