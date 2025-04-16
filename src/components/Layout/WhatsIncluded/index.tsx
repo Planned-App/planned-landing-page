@@ -113,14 +113,14 @@ const WhatsIncluded: NextPage<{}> = () => {
         <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-5 text-center">what’s included...</h2>
             <div className="bg-white border-4 border-[#1E4D38] px-6 py-6 md:px-16 md:pb-10 md:pt-16 rounded-[2.25rem] w-full max-w-4xl">
-                <ul className="space-y- md:space-y-4 text-[#000000] text-base md:text-xl font-medium pb-2 md:pb-16">
+                <ul className="space-y-2 md:space-y-4 text-[#000000] text-base md:text-xl font-medium pb-14 md:pb-16">
                     {contentSelectedPlan.map((text, index) => (
                         <li key={index} className="flex items-start">
-                            <picture className="flex-shrink-0">
-                                <img src={checkIconList.src} alt="check" className="w-5 h-5 md:w-6 md:h-6" />
+                            <picture className="flex-shrink-0 mt-0.5">
+                                <img src={checkIconList.src} alt="check" className="w-5 h-5 md:w-5 md:h-5" />
                             </picture>
-                            <span className="ml-3 md:ml-4 flex-1 text-base md:text-[16px] font-poppins">
-                                <span className="font-bold">{text.title}</span>
+                            <span className="ml-3 md:ml-4 flex-1 text-[20px] md:text-[16px] font-poppins">
+                                <span className="md:font-bold">{text.title}</span>
                                 {!isMobile && <span>: {text.content}</span>}
                             </span>
                         </li>
