@@ -95,7 +95,7 @@ const AutoPlayVideoComponent: React.FC<AutoPlayVideoProps> = ({ src, poster }) =
     style={
       isMobile
         ? {
-            width: '398px',
+            width: 'auto',
             height: '707.56px',
           }
         : undefined

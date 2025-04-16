@@ -10,63 +10,71 @@ import SpringBonusComponent from "@/components/SpringBonus/SpringBonusComponent"
 
 const monthlyContent = [
     {
-        title: "Personalized Meal Planning",
-        content: "Follow our weekly planned-for-you dinner menu or build your own fully customized plan.",
+        title: "Custom Meal Planning",
+        content: "Follow our weekly dinner menu or build your own plan.",
     },
     {
-        title: "Access 300+ Healthy & Delicious Recipes",
-        content: "With new meals added every month!",
+        title: "300+ Healthy Recipes",
+        content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
     },
     {
-        title: "Calorie & Macros Included",
-        content: "Every recipe comes with full nutritional details",
+        title: "Recipe Categories",
+        content: "Filter by gluten-free, no added sugar & more—with new categories added monthly!",
     },
     {
-        title: "Flexible Meal Customization",
-        content: "Swap ingredients to fit your preferences and adjust serving sizes",
+        title: "Nutrition Info Included",
+        content: "Every recipe comes with full calories & macros.",
     },
     {
-        title: "Smart Grocery List Generation",
-        content: "Instantly create and organize your shopping list.",
+        title: "Flexible Swaps",
+        content: "Adjust ingredients & serving sizes to fit your needs.",
+    },
+    {
+        title: "One-Click Grocery Lists",
+        content: "Instantly generate your organized shopping list.",
     },
     {
         title: "Grocery Delivery",
-        content: "Order your groceries straight to your door in just a few clicks through our Instacart integration.",
+        content: "Order your groceries to your door through our Instacart integration.",
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "Entered to win my favorite kitchen essentials every month!",
+        content: "Entered to win top kitchen essentials every month!",
     },
 ];
 
 const yearlyContent = [
     {
-        title: "Personalized Meal Planning",
-        content: "Follow our weekly planned-for-you dinner menu or build your own fully customized plan.",
+        title: "Custom Meal Planning",
+        content: "Follow our weekly dinner menu or build your own plan.",
     },
     {
-        title: "Access 300+ Healthy & Delicious Recipes",
-        content: "With new meals added every month!",
+        title: "300+ Healthy Recipes",
+        content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
     },
     {
-        title: "Calorie & Macros Included",
-        content: "Every recipe comes with full nutritional details",
+        title: "Recipe Categories",
+        content: "Filter by gluten-free, no added sugar & more—with new categories added monthly!",
     },
     {
-        title: "Flexible Meal Customization",
-        content: "Swap ingredients to fit your preferences and adjust serving sizes",
+        title: "Nutrition Info Included",
+        content: "Every recipe comes with full calories & macros.",
     },
     {
-        title: "Smart Grocery List Generation",
-        content: "Instantly create and organize your shopping list.",
+        title: "Flexible Swaps",
+        content: "Adjust ingredients & serving sizes to fit your needs.",
+    },
+    {
+        title: "One-Click Grocery Lists",
+        content: "Instantly generate your organized shopping list.",
     },
     {
         title: "Grocery Delivery",
-        content: "Order your groceries straight to your door in just a few clicks through our Instacart integration.",
+        content: "Entered to win my favorite kitchen essentials every month!",
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "Entered to win my favorite kitchen essentials every month!",
+        content: "Entered to win top kitchen essentials every month!",
     },
 ];
 
@@ -118,7 +126,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                         </li>
                     ))}
                 </ul>
-                <SpringBonusComponent />
+                {/* <SpringBonusComponent /> */}
                 <div className="grid grid-cols-2 gap-3 md:gap-8">
                     {/* Yearly Membership - Displayed first on mobile */}
                     <div
@@ -161,7 +169,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                         className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-24 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>JOIN NOW</Button>
                 </div>
                 <div className="flex justify-center">
-                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">+ $70/year in premium upgrades—yours FREE when you join today. Cancel anytime. No commitments .</span>
+                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">Easily cancel anytime. No commitments.</span>
                 </div>
             </div>
         </section>

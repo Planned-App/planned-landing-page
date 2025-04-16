@@ -1,11 +1,17 @@
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 
 const poppins = Poppins({
+  weight: ['300', '400', '600', '700'],
+  subsets: ["latin"]
+});
+
+
+const inter = Inter({
   weight: ['300', '400', '600', '700'],
   subsets: ["latin"]
 });
@@ -22,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poppins.className}><AntdRegistry>{children}</AntdRegistry></body>
+      <body className={`${poppins.className} ${inter.className}`}>
+        <AntdRegistry>{children}</AntdRegistry>
+      </body>
       <GoogleAnalytics gaId="G-6T7VVHB450" />
     </html>
   );

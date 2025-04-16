@@ -16,7 +16,7 @@ const GetStarted: NextPage<{}> = () => {
 
     return (
         <section className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
-            <h2 className="text-3xl font-bold text-[#1E4D38] mb-8 text-center">Join today & get ALL premium upgrades Included—100% FREE!</h2>
+            <h2 className="text-3xl font-bold text-[#1E4D38] mb-8 text-center">Get started today!</h2>
             <div className="bg-white border-4 border-[#1E4D38] px-6 py-6 md:px-16 md:pb-10 md:pt-16 rounded-lg w-full max-w-4xl">
 
                 <div className="grid grid-cols-2 gap-3 md:gap-8 mt-10 md:mt-0">
@@ -54,14 +54,14 @@ const GetStarted: NextPage<{}> = () => {
                 </div>
 
                 <div className="mt-6 mb-2">
-                    <p className="font-poppins text-[0.75rem] md:text-xl italic font-normal text-center">🎉 Plus access our premium breakfast, lunch, snack & seasonal cookbook recipes ($70 value)—FREE with any plan! Offer ends soon.</p>
+                    {/* <p className="font-poppins text-[0.75rem] md:text-xl italic font-normal text-center">🎉 Plus access our premium breakfast, lunch, snack & seasonal cookbook recipes ($70 value)—FREE with any plan! Offer ends soon.</p> */}
                 </div>
                 <div className="flex justify-center mb-2">
                     <Button
                         href={joinNowUrl}
-                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-6 !font-poppins !text-lg font-bold'>Join Now</Button>
+                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-xl font-bold'>JOIN NOW</Button>
                 </div>
-                <p className="text-[0.75rem] md:text-[1rem] italic font-normal text-center mt-4">Easily cancel through the app anytime. No commitments.</p>
+                <p className="text-[0.75rem] md:text-[1rem] italic font-normal text-center mt-4">Easily cancel anytime. No commitments.</p>
             </div>
         </section>
     );
