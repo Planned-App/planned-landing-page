@@ -43,6 +43,9 @@ const scrollToJoinNow = () => {
 };
 const HeroSection: React.FC = () => {
 
+
+    const classNameForText = "text-[#1E4D38] font-poppins lg:text-md font-semibold hidden lg:block"
+    const classNameForTheIcon = "w-12 h-12 md:w-20 md:h-20"
     return (
         <>
             {/* <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero bg-center bg-no-repeat bg-cover h-fit'> */}
@@ -54,7 +57,7 @@ const HeroSection: React.FC = () => {
                 </div>
                 <div className='flex flex-col items-center justify-center min-h-[calc(48vh)] md:min-h-[calc(60vh)]  lg:min-h-[calc(75vh)] text-center'>
                     <div className='mb-4 mt'>
-                        <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy eating</p>
+                        <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy cooking</p>
                         <div className='relative inline-block'>
                             {/* lg and up */}
                             <Image
@@ -88,19 +91,24 @@ const HeroSection: React.FC = () => {
                     <div className="grid grid-cols-3 gap-6 text-center">
                         {/* Item 1 */}
                         <div className="flex flex-col items-center justify-center">
-                            <div className="text-4xl text-[#1E4D38] mb-4">
+                            <div className="text-[#1E4D38] mb-4">
                                 <Image
                                     src={taskIcon}
                                     alt="task-icon"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-12 h-12 md:w-20 md:h-20"
+                                    className={classNameForTheIcon}
                                 />
                             </div>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
-                                Healthy recipe
+                            <p className="text-[#1E4D38] font-poppins text-xl lg:text-md font-semibold hidden lg:block">
+                                Healthy recipes
                             </p>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
+                            {/* For md and down */}
+                            <p className="text-[#1E4D38] font-poppins text-md sm:text-sm lg:text-xl font-semibold md:block lg:hidden">
+                                Healthy <br /> recipes
+                            </p>
+
+                            <p className={classNameForText}>
                                 Use the planned-for-you weekly <br /> meal plan or build your own
                             </p>
                         </div>
@@ -113,13 +121,17 @@ const HeroSection: React.FC = () => {
                                     alt="planned-logo"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-12 h-12 md:w-20 md:h-20"
+                                    className={classNameForTheIcon}
                                 />
                             </div>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
+                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
                                 Meal planning
                             </p>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
+                            {/* For md and down */}
+                            <p className="text-[#1E4D38] font-poppins text-md sm:text-sm lg:text-xl font-semibold md:block lg:hidden">
+                                Meal <br /> planning
+                            </p>
+                            <p className={classNameForText}>
                                 Automatically generate your weekly <br /> grocery list & shop online or in store
                             </p>
                         </div>
@@ -132,14 +144,18 @@ const HeroSection: React.FC = () => {
                                     alt="food-icon"
                                     // width={64} // Set your desired width
                                     // height={64} // Set your desired height
-                                    className="w-12 h-12 md:w-20 md:h-20"
+                                    className={classNameForTheIcon}
                                 />
                             </div>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold lg:hidden">
+                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
                                 Grocery shopping
                             </p>
-                            <p className="text-[#1E4D38] font-poppins text-xl font-semibold hidden lg:block">
-                                Access to 500+ healthy recipes <br /> that the whole family will love
+                            {/* For md and down */}
+                            <p className="text-[#1E4D38] font-poppins text-md  sm:text-sm lg:text-xl font-semibold md:block lg:hidden">
+                                Grocery <br /> shopping
+                            </p>
+                            <p className={classNameForText}>
+                                Access to 250+ healthy recipes <br /> that the whole family will love
                             </p>
                         </div>
                     </div>

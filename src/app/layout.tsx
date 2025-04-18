@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
+import { FacebookPixelEvents } from '@/components/PixelEvents';
 
 
 const poppins = Poppins({
@@ -32,6 +33,7 @@ export default function RootLayout({
         <AntdRegistry>{children}</AntdRegistry>
       </body>
       <GoogleAnalytics gaId="G-6T7VVHB450" />
+      <FacebookPixelEvents/>
     </html>
   );
 }

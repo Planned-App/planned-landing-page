@@ -107,8 +107,8 @@ const WhatsIncluded: NextPage<{}> = () => {
 
     // Define URLs for each plan type
     const joinNowUrl = selectedPlan === 'monthly'
-        ? 'https://buy.stripe.com/test_28o6q81Sp14vepW5kk'
-        : 'https://buy.stripe.com/test_00gdSAeFbaF5fu09AB';
+        ? 'https://buy.stripe.com/3cs00D3Pyfbv8ak4gj'
+        : 'https://buy.stripe.com/fZe00D3PybZj2Q03cg';
     return (
         <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-5 text-center">what’s included...</h2>
