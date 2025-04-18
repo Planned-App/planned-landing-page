@@ -8,8 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        'screen-adjusted': 'calc(100vh - 64px)' // optional fallback
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+      },
+      colors: {
+        pink: {
+          200: '#FFECFA', 
+          600: '#D04477', 
+          "title": '#A91A4E',
+
+        },
+      },
+      borderRadius: {
+        'full': '9999px',
       },
       backgroundImage: {
         'hero': "url('/hero-section.png')",

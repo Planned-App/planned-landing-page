@@ -9,6 +9,7 @@ import drawingCircle from '../../../../public/drawing-circle.png';
 import taskIcon from '../../../../public/task-icon.svg';
 import plannedLogo from '../../../../public/cart-outline.svg';
 import foodIcon from '../../../../public/food-icon.svg';
+import SpringBonusBanner from '@/components/SpringBonus/SpringBonusBanner';
 
 const scrollToJoinNow = () => {
     const targetElement = document.getElementById("join-now");
@@ -44,16 +45,17 @@ const HeroSection: React.FC = () => {
 
 
     const classNameForText = "text-[#1E4D38] font-poppins lg:text-md font-semibold hidden lg:block"
-    const classNameForTheIcon = "w-10 h-10 sm:h-7 sm:w-7  md:w-14 md:h-14 lg:h-10 lg:w-h-10"
+    const classNameForTheIcon = "w-12 h-12 md:w-20 md:h-20"
     return (
         <>
             {/* <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero bg-center bg-no-repeat bg-cover h-fit'> */}
-            <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-110px_top_-12px] '>
+            <section className='bg-[#ffff] overflow-hidden w-full max-w-[100vw] min-h-[88vh] md:min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] '>
 
                 <div>
                     <HeaderMenu />
+                    {/* <SpringBonusBanner /> */}
                 </div>
-                <div className='flex flex-col items-center justify-center min-h-[calc(73vh)] lg:min-h-[calc(75vh)] text-center'>
+                <div className='flex flex-col items-center justify-center min-h-[calc(48vh)] md:min-h-[calc(60vh)]  lg:min-h-[calc(75vh)] text-center'>
                     <div className='mb-4 mt'>
                         <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy cooking</p>
                         <div className='relative inline-block'>
@@ -62,27 +64,27 @@ const HeroSection: React.FC = () => {
                                 src={drawingCircle}
                                 alt="circle"
                                 layout='intrinsic'
-                                className="hidden lg:block absolute top-[-50px] right-[-70px] sm:top-[-43px] sm:right-[-40px] h-auto pointer-events-none"
+                                className="hidden lg:block absolute top-[-50px] right-[-70px] sm:top-[-27px] sm:right-[-46px] w-[270px] h-auto pointer-events-none"
                             />
                             {/* lg and down */}
                             <Image
                                 src={drawingCircle}
                                 alt="circle"
                                 layout='intrinsic'
-                                className="lg:hidden absolute top-[-27px] right-[-33px] md:top-[-43px] md:right-[-38px] h-auto pointer-events-none w-[200px] md:w-[300px] "
+                                className="lg:hidden absolute top-[-14px] right-[-27px] sm:top-[-13px] sm:right-[-26px] h-auto pointer-events-none !w-[142px] sm:!w-[215px]"
                             />
                             <p className='z-10 inline-block text-4xl sm:text5xl  md:text-6xl lg:text-7xl font-bold text-[#1E4D38] relative'>
-                                made simple.
+                                made easy.
                             </p>
                         </div>
                     </div>
                     <div className=''>
-                        <p className='text-sm lg:text-lg font-bold text-[#1E4D38]'>Plan healthy and delicious meals, generate a</p>
-                        <p className='text-sm lg:text-lg font-bold text-[#1E4D38]'>grocery list, shop & enjoy!</p>
+                        <p className='text-xs md:text-3xl font-bold text-[#1E4D38]'>Plan healthy and delicious meals, generate a</p>
+                        <p className='text-xs md:text-3xl font-bold text-[#1E4D38]'>grocery list, shop & enjoy!</p>
                     </div>
-
-
-                    <Button onClick={scrollToJoinNow} href="#join-now" className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-12 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>Get started</Button>
+                    
+                    <Button onClick={scrollToJoinNow} href="#join-now" className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-20 !py-6 !font-poppins !text-xl md:!text-[27px] font-bold mt-[2.1875rem]'>
+                    Get started</Button>
                 </div>
 
                 <section className="bg-[#E1E6C8] py-4 w-full absolute bottom-0 left-0">
