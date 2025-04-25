@@ -70,7 +70,7 @@ const yearlyContent = [
     },
     {
         title: "Grocery Delivery",
-        content: "Entered to win my favorite kitchen essentials every month!",
+        content: "Order your groceries to your door through our Instacart integration.",
     },
     {
         title: "Exclusive Monthly Giveaways",
