@@ -162,14 +162,13 @@ const WhatsIncluded: NextPage<{}> = () => {
                         <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Billed monthly at $12, cancel anytime.</p>
                     </div>
                 </div>
-
                 <div className="flex justify-center mt-[1.0625rem] mb-[0.625rem] md:my-4">
                     <Button
                         href={joinNowUrl}
-                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-24 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>JOIN NOW</Button>
+                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-lg !font-bold mt-[2.1875rem]'>Try For Free!</Button>
                 </div>
                 <div className="flex justify-center">
-                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">Easily cancel anytime. No commitments.</span>
+                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">7-day free trial. Easily cancel anytime. No commitments</span>
                 </div>
             </div>
         </section>
