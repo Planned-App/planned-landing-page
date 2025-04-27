@@ -59,7 +59,7 @@ const GetStarted: NextPage<{}> = () => {
                 <div className="flex justify-center mb-2">
                     <Button
                         href={joinNowUrl}
-                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-xl font-bold'>JOIN NOW</Button>
+                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-xl font-bold'>Try For Free!</Button>
                 </div>
                 <p className="text-[0.75rem] md:text-[1rem] italic font-normal text-center mt-4">Easily cancel anytime. No commitments.</p>
             </div>

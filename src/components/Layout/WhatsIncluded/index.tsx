@@ -166,7 +166,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                 <div className="flex justify-center mt-[1.0625rem] mb-[0.625rem] md:my-4">
                     <Button
                         href={joinNowUrl}
-                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-24 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>JOIN NOW</Button>
+                        className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-24 !py-6 !font-poppins !text-lg font-bold mt-[2.1875rem]'>Try For Free!</Button>
                 </div>
                 <div className="flex justify-center">
                     <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">Easily cancel anytime. No commitments.</span>
