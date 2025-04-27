@@ -61,7 +61,7 @@ const GetStarted: NextPage<{}> = () => {
                         href={joinNowUrl}
                         className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-lg !font-bold mt-[2.1875rem]'>Try For Free!</Button>
                 </div>
-                <p className="text-[0.75rem] md:text-[1rem] italic font-normal text-center mt-4">Easily cancel anytime. No commitments.</p>
+                <p className="text-[0.75rem] md:text-[1rem] italic font-normal text-center mt-4">7-day free trial. Easily cancel anytime. No commitments</p>
             </div>
         </section>
     );

@@ -168,7 +168,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                         className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-lg !font-bold mt-[2.1875rem]'>Try For Free!</Button>
                 </div>
                 <div className="flex justify-center">
-                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">Easily cancel anytime. No commitments.</span>
+                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">7-day free trial. Easily cancel anytime. No commitments</span>
                 </div>
             </div>
         </section>
