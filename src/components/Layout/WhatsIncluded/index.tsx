@@ -134,8 +134,8 @@ const yearlyContentWeb = [
         content: "Adjust ingredients & serving sizes to fit your needs.",
     },
     {
-        title: "One-Click Grocery Lists",
-        content: "Instantly generate your organized shopping list.",
+        title: "Smart Grocery Lists",
+        content: "Saving customers hundreds of dollars per year!",
     },
     {
         title: "Grocery Delivery",
