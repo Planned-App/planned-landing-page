@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
     return (
         <>
             {/* <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero bg-center bg-no-repeat bg-cover h-fit'> */}
-            <section className='bg-[#ffff] overflow-hidden w-full max-w-[100vw] min-h-[88vh] md:min-h-screen relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] '>
+            <section className='bg-[#ffff] overflow-hidden w-full max-w-[100vw] min-h-[100svh] md:min-h-[100svh] relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] '>
 
                 <div>
                     <HeaderMenu />
