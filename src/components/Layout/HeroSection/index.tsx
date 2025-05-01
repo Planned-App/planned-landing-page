@@ -57,7 +57,7 @@ const HeroSection: React.FC = () => {
                 </div>
                 <div className='flex flex-col items-center justify-center min-h-[calc(48vh)] md:min-h-[calc(60vh)]  lg:min-h-[calc(75vh)] text-center'>
                     <div className='mb-4 mt'>
-                        <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy cooking</p>
+                        <p className='text-4xl sm:text5xl md:text-6xl lg:text-7xl font-bold text-[#1E4D38] z-50 relative'>Healthy eating</p>
                         <div className='relative inline-block'>
                             {/* lg and up */}
                             <Image
