@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '../../../../public/footer-logo.png';
+import logo from '../../../../public/footer-logo-healthy-kitchen.png';
 import Link from 'next/link';
 
 const Footer: React.FC = () => {
@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
                     <div className="w-10 h-10">
                         <Image src={logo} alt="Logo" layout="responsive" width={40} height={40} className="rounded-md" />
                     </div>
-                    <p className="text-base md:text-xl text-[#1E4D38]">© 2024, PLANNED LLC.</p>
+                    <p className="text-base md:text-xl text-[#1E4D38]">© 2025, PLANNED LLC.</p>
                     <p className="text-base md:text-xl text-[#1E4D38]">All Rights Reserved</p>
                 </div>
 
