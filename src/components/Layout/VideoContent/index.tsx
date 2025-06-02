@@ -50,7 +50,7 @@ const VideoContent: NextPage<{}> = () => {
     return (
         <>
         <section className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] h-full">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-8 text-center">Planned makes healthy eating easy for thousands of people...</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-8 text-center">Healthy Kitchen makes healthy eating easy for thousands of people...</h2>
             <div>
             <AutoPlayVideoComponent
                     src={videoSrc}

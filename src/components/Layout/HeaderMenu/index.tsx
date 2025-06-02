@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import the Next.js Image component
-import logo from '../../../../public/planned-logo.png';
+import logo from '../../../../public/healthy-kitchen.png';
 import { useScrollPosition } from '../../../hooks/useScrollPosition';
 import type { NextPage } from 'next';
 import styles from './navbar.module.css';
@@ -44,7 +44,7 @@ const NavbarComponent: NextPage<{}> = () => {
                                 <div className='relative w-48 lg:w-64'>
                                     <Image
                                         src={logo}
-                                        width={270}
+                                        width={470}
                                         alt='Planned Logo'
                                         layout='intrinsic' // Adjust layout as needed (e.g., 'fixed', 'responsive')
                                         className='lg:mr-16 cursor-pointer'
