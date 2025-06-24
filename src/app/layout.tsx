@@ -43,7 +43,6 @@ export default function RootLayout({
           ttq.load('D1CR06JC77UC7904JV50');
           ttq.page();
         }(window, document, 'ttq');
-        </script>
       `}
       </Script>
       {/* <!-- TikTok Pixel Code End --> */}
