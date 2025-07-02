@@ -12,13 +12,19 @@ const SuccessPage: React.FC = () => {
       const countryRes = await fetch("https://ipwho.is/");
       const data = await countryRes.json();
       const country = data?.country || "Unknown";
+       const currency = data?.currency?.code || "USD"; 
 
       let attempts = 0;
       const maxAttempts = 10;
 
       const checkPixel = () => {
         if (window.ttq) {
-          window.ttq.track("Purchase", { content_name: country, content_type: "success_page" });
+          window.ttq.track("PURCHASE_LINK_SUCCESS_EVENT", {
+            content_name: country || "Unknown",
+            content_type: "product",
+            value: 0.0, // 0 value is acceptable
+            currency: currency // must be a valid currency code
+          });
           console.log("✅ TikTok Pixel fired with country:", country);
         } else if (attempts < maxAttempts) {
           attempts++;
