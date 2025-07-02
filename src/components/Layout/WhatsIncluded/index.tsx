@@ -37,8 +37,8 @@ const monthlyContent = [
         content: "Order your groceries to your door through our Instacart integration.",
     },
     {
-        title: "Exclusive monthly giveaways",
-        content: "Entered to win top kitchen essentials every month!",
+        title: "Exclusive giveaways",
+        content: "Entered to win top kitchen essentials!",
     },
 ];
 
@@ -72,8 +72,8 @@ const yearlyContent = [
         content: "Order your groceries to your door through our Instacart integration.",
     },
     {
-        title: "Exclusive monthly giveaways",
-        content: "Entered to win top kitchen essentials every month!",
+        title: "Exclusive giveaways",
+        content: "Entered to win top kitchen essentials!",
     },
 ];
 
@@ -108,7 +108,7 @@ const monthlyContentWeb = [
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "Entered to win top kitchen essentials every month!",
+        content: "Entered to win top kitchen essentials!",
     },
 ];
 
@@ -143,7 +143,7 @@ const yearlyContentWeb = [
     },
     {
         title: "Exclusive Monthly Giveaways",
-        content: "Entered to win top kitchen essentials every month!",
+        content: "Entered to win top kitchen essentials!",
     },
 ];
 
