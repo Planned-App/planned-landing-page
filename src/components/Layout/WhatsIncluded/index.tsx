@@ -107,7 +107,7 @@ const monthlyContentWeb = [
         content: "Order your groceries to your door through our Instacart integration.",
     },
     {
-        title: "Exclusive Monthly Giveaways",
+        title: "Exclusive Giveaways",
         content: "Entered to win top kitchen essentials!",
     },
 ];
