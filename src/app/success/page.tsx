@@ -18,7 +18,7 @@ const SuccessPage: React.FC = () => {
 
       const checkPixel = () => {
         if (window.ttq) {
-          window.ttq.track("PURCHASE_LINK_SUCCESS_EVENT", { content_name: country, content_type: "success_page" });
+          window.ttq.track("Purchase", { content_name: country, content_type: "success_page" });
           console.log("✅ TikTok Pixel fired with country:", country);
         } else if (attempts < maxAttempts) {
           attempts++;
