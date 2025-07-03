@@ -1,11 +1,45 @@
-'use client';
-import Image from 'next/image';
-import logo from '../../../../public/logo.png'; // Replace with the actual path to your logo
-import androidLogo from '../../../public/google-play.png'; // Replace with the actual path to your Android logo
-import appleLogo from '../../../public/apple-store.png'; // Replace with the actual path to your Apple logo
-import HeaderMenu from '@/components/Layout/HeaderMenu';
+"use client";
+import Image from "next/image";
+import logo from "../../../../public/logo.png"; // Replace with the actual path to your logo
+import androidLogo from "../../../public/google-play.png"; // Replace with the actual path to your Android logo
+import appleLogo from "../../../public/apple-store.png"; // Replace with the actual path to your Apple logo
+import HeaderMenu from "@/components/Layout/HeaderMenu";
+import { useEffect } from "react";
 
 const SuccessPage: React.FC = () => {
+  useEffect(() => {
+    const waitForTikTokPixel = async () => {
+      const countryRes = await fetch("https://ipwho.is/");
+      const data = await countryRes.json();
+      const country = data?.country || "Unknown";
+       const currency = data?.currency?.code || "USD"; 
+
+      let attempts = 0;
+      const maxAttempts = 10;
+
+      const checkPixel = () => {
+        if (window.ttq) {
+          window.ttq.track("PURCHASE_LINK_SUCCESS_EVENT", {
+            content_name: country || "Unknown",
+            content_type: "product",
+            value: 0.0, // 0 value is acceptable
+            currency: currency // must be a valid currency code
+          });
+          console.log("✅ TikTok Pixel fired with country:", country);
+        } else if (attempts < maxAttempts) {
+          attempts++;
+          setTimeout(checkPixel, 500); // retry every 500ms
+        } else {
+          console.warn("⚠️ TikTok Pixel not loaded after multiple attempts.");
+        }
+      };
+
+      checkPixel();
+    };
+
+    waitForTikTokPixel();
+  }, []);
+
   return (
     <section className="bg-[#F4F6F0] min-h-screen flex flex-col justify-between items-center text-center p-6">
       {/* Header with Logo */}
@@ -17,7 +51,7 @@ const SuccessPage: React.FC = () => {
       <div className="flex flex-col items-center justify-center flex-grow">
         {/* Main message */}
         <p className="text-2xl md:text-5xl lg:text-[66px] font-bold text-[#1E4D38] mb-4 md:mb-6 lg:mb-8">
-          Welcome to Planned!
+          Welcome to Healthy Kitchen!
         </p>
         <p className="text-2xl md:text-5xl lg:text-[37px] font-bold text-[#1E4D38] mb-6 md:mb-10 lg:mb-12 underline">
           Your App Login Info is in your email inbox.

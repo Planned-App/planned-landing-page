@@ -34,7 +34,7 @@ export default function RootLayout({
       <GoogleAnalytics gaId="G-6T7VVHB450" />
       <FacebookPixelEvents />
       {/* <!-- TikTok Pixel Code Start --> */}
-      <Script id="tiktok-pixel"  strategy="lazyOnload">
+      <Script id="tiktok-pixel" strategy="lazyOnload">
         {`
         !function (w, d, t) {
           w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
