@@ -11,7 +11,8 @@ const GetStarted: NextPage<{}> = () => {
     const [selectedPlan, setSelectedPlan] = useState<'monthly' | 'yearly'>('yearly');
 
     const joinNowUrl = selectedPlan === 'monthly'
-        ? 'https://buy.stripe.com/3cs00D3Pyfbv8ak4gj'
+        // ? 'https://buy.stripe.com/3cs00D3Pyfbv8ak4gj' // 12 USD 
+        ? 'https://buy.stripe.com/bJe7sE2j2dvp5Ipext8N205' // 14 USD
         : 'https://buy.stripe.com/fZe00D3PybZj2Q03cg';
 
     return (
