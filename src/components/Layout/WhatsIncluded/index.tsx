@@ -83,7 +83,7 @@ const monthlyContentWeb = [
         content: "Follow our weekly dinner menu or build your own plan.",
     },
     {
-        title: "300+ Healthy Recipes",
+        title: "350+ Healthy Recipes",
         content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
     },
     {
@@ -118,7 +118,7 @@ const yearlyContentWeb = [
         content: "Follow our weekly dinner menu or build your own plan.",
     },
     {
-        title: "300+ Healthy Recipes",
+        title: "350+ Healthy Recipes",
         content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
     },
     {
