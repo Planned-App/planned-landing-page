@@ -13,7 +13,7 @@ const monthlyContent = [
         content: "Follow our weekly dinner menu or build your own plan.",
     },
     {
-        title: "300+ healthy & delicious recipes",
+        title: "350+ healthy & delicious recipes",
         content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
     },
     {
@@ -48,7 +48,7 @@ const yearlyContent = [
         content: "Follow our weekly dinner menu or build your own plan.",
     },
     {
-        title: "300+ healthy & delicious recipes",
+        title: "350+ healthy & delicious recipes",
         content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
     },
     {
