@@ -12,7 +12,7 @@ const TermsOfService: React.FC = () => {
                 A service provided by Planned LLC DBA Healthy Kitchen
             </p>
             <p className="mb-4 text-base md:text-lg text-justify">
-                Welcome to Healthy Kitchen: Meal Planner, a healthy meal plan subscription service provided by Planned LLC DBA Healthy Kitchen ("Healthy Kitchen," "we," "our," or "us") through the Healthy Kitchen mobile application and website. These Terms of Service govern your use of our services. By using our service, you agree to be bound by these terms and conditions.
+                Welcome to Healthy Kitchen: Meal Planner, a healthy meal plan subscription service provided by Planned LLC DBA Healthy Kitchen (&quot;Healthy Kitchen,&quot; &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) through the Healthy Kitchen mobile application and website. These Terms of Service govern your use of our services. By using our service, you agree to be bound by these terms and conditions.
             </p>
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Nutritional Information Disclaimer</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
