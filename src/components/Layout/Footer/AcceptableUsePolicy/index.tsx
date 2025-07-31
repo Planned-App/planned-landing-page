@@ -79,7 +79,7 @@ const AcceptableUsePolicy: React.FC = () => {
 
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">8. Reporting Violations</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                If you encounter any content or behavior in Healthy Kitchen that violates this Acceptable Use Policy, please report it to our support team at <a href="mailto:support@healthykitchen.com?subject=Acceptable%20Use%20Policy%20Violation" className="text-blue-600 underline">support@healthykitchen.com </a>. We will review all reports and take appropriate action.
+                If you encounter any content or behavior in Healthy Kitchen that violates this Acceptable Use Policy, please report it to our support team at <a href="mailto:support@healthykitchen.com?subject=Acceptable%20Use%20Policy%20Violation" className="text-blue-600 underline">support@healthykitchen.com</a>. We will review all reports and take appropriate action.
             </p>
 
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">9. Changes to this Policy</h2>
