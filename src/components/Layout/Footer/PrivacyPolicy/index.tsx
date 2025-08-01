@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 const PrivacyPolicy: React.FC = () => {
@@ -5,90 +7,103 @@ const PrivacyPolicy: React.FC = () => {
         <div className="px-4 md:px-8 lg:px-16 py-4 text-gray-800">
             {/* Title */}
             <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">
-                Privacy Policy for Claire Hodgins LLC DBA Planned
+                Privacy Policy for Planned LLC DBA Healthy Kitchen
             </h1>
             <p className="mb-4 text-base md:text-lg text-justify">
-                At Claire Hodgins LLC DBA Planned, we prioritize the protection of your privacy. This privacy policy outlines how we gather, utilize, and safeguard information about you in connection with your subscription to our app, Planned, available on the App Store and Google Play Store.
+                At <strong>Planned LLC DBA Healthy Kitchen</strong>, we prioritize the protection of your privacy. This Privacy Policy outlines how we gather, utilize, and safeguard information about you in connection with your subscription to the Healthy Kitchen: Meal Planner app, available on the App Store and Google Play Store.
             </p>
 
-            {/* Information We Collect */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Information We Collect</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                Upon subscribing to Planned, we collect information you provide, such as your name, email address, and phone number. Phone numbers are collected solely to send one-time password codes for secure login; we do not use phone numbers for marketing purposes or sell phone number data. We do not collect any payment information. The payment information is not collected directly by us, as this process is securely managed through Stripe on the web.
+                When you subscribe to Healthy Kitchen, we collect information you provide, such as your name, email address, and phone number.
             </p>
+            <ul className="list-disc pl-6 mb-4 text-base md:text-lg">
+                <li>Phone numbers are collected solely to send one-time password codes for secure login.<br/><strong>We do not</strong> use phone numbers for marketing purposes or sell phone number data.</li>
+                <li><strong>We do not</strong> collect or store payment information directly. All payments are securely processed through <strong>Stripe</strong> on the web.</li>
+            </ul>
 
-            {/* How We Use Your Information */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">How We Use Your Information</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                The information we collect is used to deliver, improve, and personalize our services and to facilitate communication with you. By subscribing, you agree to opt into receiving email communications from Claire Hodgins LLC DBA Planned.
+                The information we collect is used to:
+            </p>
+            <ul className="list-disc pl-6 mb-4 text-base md:text-lg">
+                <li>Deliver, improve, and personalize our services</li>
+                <li>Facilitate communication with you</li>
+            </ul>
+            <p className="mb-4 text-base md:text-lg text-justify">
+                By subscribing, you agree to receive email communications from <strong>Planned LLC DBA Healthy Kitchen</strong> related to your account, service updates, and marketing materials.
             </p>
 
-            {/* Sharing Your Information */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Sharing Your Information</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                Your information may be shared with third-party service providers engaged in activities on our behalf, such as payment processing and email marketing. However, we never share data for marketing or any other purpose.
+                Your information may be shared with third-party service providers who perform activities on our behalf (e.g., payment processing, email marketing).
+            </p>
+            <p className="mb-4 text-base md:text-lg text-justify">
+                <strong>We will never sell or share your personal data</strong> for marketing purposes or other unrelated uses.
             </p>
 
-            {/* Canceling Your Subscription */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Canceling Your Subscription</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                Subscribers can cancel their subscription at any time to avoid future billing. Simply log into your profile on the app and click ‘cancel subscription’. You can also cancel by emailing us at support@joinplanned.com.
+                Subscribers may cancel their subscription at any time to avoid future billing:
             </p>
+            <ul className="list-disc pl-6 mb-4 text-base md:text-lg">
+                <li>Log into your profile in the app and click <strong>“Cancel Subscription”</strong></li>
+                <li><p className="mb-2 text-base md:text-lg">Email: <strong><a href="mailto:support@healthykitchen.com?subject=Cancel%20Subscription" className="text-blue-600 underline">support@healthykitchen.com</a></strong></p></li>
+            </ul>
 
-            {/* Data Deletion */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Data Deletion</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                If you choose to delete your account, all your data will be permanently removed from our application’s system and database. This process is irreversible, and we will not retain any information beyond what is required by law.
+                If you choose to delete your account, all your data will be permanently removed from our application’s systems and database. This process is <strong>irreversible</strong>, and we will not retain any information beyond what is required by law.
             </p>
 
-            {/* Data Retention */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Data Retention</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
                 We retain your information only as long as necessary to fulfill the purposes outlined in this policy or as required by law. If your account is deleted, all data is permanently erased as stated above.
             </p>
 
-            {/* Data Security */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Data Security</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
                 We employ robust security measures to protect your information from unauthorized access, disclosure, alteration, or destruction. Safeguarding your data is a top priority for us.
             </p>
 
-            {/* Children’s Privacy */}
+            <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Imported Recipes</h2>
+            <p className="mb-4 text-base md:text-lg text-justify">
+                Imported recipes, including instructions, images, and captions, are stored privately in your account and are <strong>not shared with other users or made publicly available</strong> by Healthy Kitchen.
+            </p>
+
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Children’s Privacy</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                Our services are not intended for individuals under the age of 13, and we do not knowingly collect personal information from minors. If we become aware of such information being collected inadvertently, we will take prompt steps to delete it.
+                Our services are not intended for individuals under the age of 13, and we do not knowingly collect personal information from minors. If we become aware that we have collected such information, we will promptly delete it.
             </p>
 
-            {/* Changes to this Policy */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Changes to this Policy</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                This privacy policy may be updated periodically to reflect changes in our practices, services, or legal requirements. We will notify you of any significant changes by posting the updated policy on our website and indicating the date of the latest revision. Your continued use of our services following the posting of changes signifies your acceptance of those changes.
+                This Privacy Policy may be updated periodically to reflect changes in our practices, services, or legal requirements.
             </p>
+            <ul className="list-disc pl-6 mb-4 text-base md:text-lg">
+                <li>Significant changes will be communicated within the app and/or via email.</li>
+                <li>Continued use of Healthy Kitchen after changes are posted signifies your acceptance of the updated policy.</li>
+            </ul>
 
-            {/* Contact Us */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Contact Us</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                If you have any questions or concerns about this privacy policy or our data practices, please contact us at:
+                If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:
             </p>
-            <p className="mb-4 text-base md:text-lg text-justify">
-                Claire Hodgins LLC DBA Planned<br />
-                Email: support@joinplanned.com<br />
-                Address: 501 Union St Ste 545, PMB 718198, Nashville, Tennessee 37219-1876, US
-            </p>
+            <p className="mb-2 text-base md:text-lg"><strong>Planned LLC DBA Healthy Kitchen</strong></p>
+            <p className="mb-2 text-base md:text-lg">Email: <strong><a href="mailto:support@healthykitchen.com?subject=Support%20Request" className="text-blue-600 underline">support@healthykitchen.com</a></strong></p>
+            <p className="mb-4 text-base md:text-lg">Address: 501 Union St Ste 545, PMB 718198, Nashville, Tennessee 37219-1876, US</p>
 
-            {/* Your Consent */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Your Consent</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                By using Planned, you consent to our privacy policy and agree to its terms.
+                By using the Healthy Kitchen app, you consent to this Privacy Policy and agree to its terms.
             </p>
 
-            {/* Governing Law */}
             <h2 className="text-xl md:text-2xl font-semibold mt-6 mb-2">Governing Law</h2>
             <p className="mb-4 text-base md:text-lg text-justify">
-                This privacy policy and any disputes related to it shall be governed by and construed in accordance with the laws of Tennessee, without regard to its conflict of law principles.
+                This Privacy Policy and any disputes related to it shall be governed by and construed in accordance with the laws of the state of Tennessee, without regard to its conflict of law principles.
             </p>
-            <p className="text-base md:text-lg text-justify">
-                By subscribing to Planned, you acknowledge that you have read, understood, and agree to this privacy policy. If you do not agree to these terms, please do not use our service.
+            <p className="mb-4 text-base md:text-lg text-justify">
+                By subscribing to Healthy Kitchen, you acknowledge that you have read, understood, and agree to this Privacy Policy. If you do not agree, please do not use our service.
             </p>
         </div>
     );
