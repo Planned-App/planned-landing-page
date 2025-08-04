@@ -9,36 +9,36 @@ import checkIconList from '../../../../public/check.svg'
 
 const monthlyContent = [
     {
-        title: "Create your own meal plans",
-        content: "Follow our weekly dinner menu or build your own plan.",
+        title: "",
+        content: "Create custom meal plans in minutes",
     },
     {
-        title: "350+ healthy & delicious recipes",
-        content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
+        title: "",
+        content: "350+ healthy, delicious recipes",
     },
     {
-        title: "Calories & macros Included",
-        content: "Filter by gluten-free, no added sugar & more—with new categories added monthly!",
+        title: "",
+        content: "Import recipes from the web or Instagram",
     },
     {
-        title: "Searchable recipe categories",
-        content: "Every recipe comes with full calories & macros.",
+        title: "",
+        content: "Recipes includes calories & macros",
     },
     {
-        title: "Customize recipes with ingredient swaps ",
-        content: "Adjust ingredients & serving sizes to fit your needs.",
+        title: "",
+        content: "Search by categories like gluten-free, no added sugar, and more",
     },
     {
-        title: "Automatic grocery list generation",
-        content: "Instantly generate your organized shopping list.",
+        title: "",
+        content: "Customize recipes with ingredient swaps & serving sizes",
     },
     {
-        title: "Easy grocery delivery through instacart",
-        content: "Order your groceries to your door through our Instacart integration.",
+        title: "",
+        content: "Automatic grocery list generation",
     },
     {
-        title: "Exclusive giveaways",
-        content: "Entered to win top kitchen essentials!",
+        title: "",
+        content: "Fast optional grocery delivery with Instacart",
     },
 ];
 
@@ -79,71 +79,71 @@ const yearlyContent = [
 
 const monthlyContentWeb = [
     {
-        title: "Custom Meal Planning",
-        content: "Follow our weekly dinner menu or build your own plan.",
+        title: "",
+        content: "Create custom meal plans in minutes – take the guesswork out of dinner",
     },
     {
-        title: "350+ Healthy Recipes",
-        content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
+        title: "",
+        content: "350+ healthy, family-friendly recipes everyone will love",
     },
     {
-        title: "Recipe Categories",
-        content: "Filter by gluten-free, no added sugar & more—with new categories added monthly!",
+        title: "",
+        content: "Import recipes from the web or Instagram to keep all your favorites in one place",
     },
     {
-        title: "Nutrition Info Included",
-        content: "Every recipe comes with full calories & macros.",
+        title: "",
+        content: "Every recipe includes calories & macros so you can hit your goals",
     },
     {
-        title: "Flexible Swaps",
-        content: "Adjust ingredients & serving sizes to fit your needs.",
+        title: "",
+        content: "Search by categories like gluten-free, no added sugar, and more",
     },
     {
-        title: "Smart Grocery Lists",
-        content: "Saving customers hundreds of dollars per year!",
+        title: "",
+        content: "Customize recipes with ingredient swaps & serving sizes to fit your needs",
     },
     {
-        title: "Grocery Delivery",
-        content: "Order your groceries to your door through our Instacart integration.",
+        title: "",
+        content: "Automatic grocery list generation to save time and reduce stress",
     },
     {
-        title: "Exclusive Giveaways",
-        content: "Entered to win top kitchen essentials!",
+        title: "",
+        content: "Optional fast, easy grocery delivery with Instacart",
     },
 ];
 
 const yearlyContentWeb = [
     {
-        title: "Custom Meal Planning",
-        content: "Follow our weekly dinner menu or build your own plan.",
+        title: "",
+        content: "Create custom meal plans in minutes – take the guesswork out of dinner",
     },
     {
-        title: "350+ Healthy Recipes",
-        content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
+        title: "",
+        content: "350+ healthy, family-friendly recipes everyone will love",
     },
     {
-        title: "Recipe Categories",
-        content: "Filter by gluten-free, no added sugar & more—with new categories added monthly!",
+        title: "",
+        content: "Import recipes from the web or Instagram to keep all your favorites in one place",
     },
     {
-        title: "Nutrition Info Included",
-        content: "Every recipe comes with full calories & macros.",
+        title: "",
+        content: "Every recipe includes calories & macros so you can hit your goals",
     },
     {
-        title: "Flexible Swaps",
-        content: "Adjust ingredients & serving sizes to fit your needs.",
+        title: "",
+        content: "Search by categories like gluten-free, no added sugar, and more",
     },
     {
-        title: "Smart Grocery Lists",
-        content: "Saving customers hundreds of dollars per year!",
+        title: "",
+        content: "Customize recipes with ingredient swaps & serving sizes to fit your needs",
     },
     {
-        title: "Grocery Delivery",
-        content: "Order your groceries to your door through our Instacart integration.",
+        title: "",
+        content: "Automatic grocery list generation to save time and reduce stress",
     },
     {
-        title: "Exclusive Giveaways",
-        content: "Entered to win top kitchen essentials!",
+        title: "",
+        content: "Optional fast, easy grocery delivery with Instacart",
     },
 ];
 
@@ -203,7 +203,9 @@ const WhatsIncluded: NextPage<{}> = () => {
                             </picture>
                             <span className="ml-2 md:ml-4 flex-1 text-[12px] md:text-[16px] font-poppins">
                                 <span className="md:font-bold">{text.title}</span>
-                                {!isMobile && <span>: {text.content}</span>}
+                                {!isMobile && <span>
+                                    {/* : */}
+                                     {text.content}</span>}
                             </span>
                         </li>
                     ))}
