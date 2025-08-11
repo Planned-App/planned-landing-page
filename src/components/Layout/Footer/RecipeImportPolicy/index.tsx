@@ -107,14 +107,7 @@ const RecipeImportPolicy: React.FC = () => {
       <p className="mb-4 text-base md:text-lg text-justify">
         We respect intellectual property and require our users to do the same. Our Terms &amp; Conditions prohibit copyright
         infringement, and we have a{' '}
-        <a
-          href="https://docs.google.com/document/d/1hO2sxI4u2wIXnX-uOJOfwFVtqp2fpC6rbau9G4vpGeo/edit?usp=sharing"
-          className="text-blue-600 underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           DMCA Policy
-        </a>{' '}
         in place for handling any concerns.
       </p>
       <p className="mb-4 text-base md:text-lg">
@@ -214,7 +207,7 @@ const RecipeImportPolicy: React.FC = () => {
         </li>
         <li>
           <span className="font-semibold">The location of the infringing material</span> (for example: &ldquo;a user saved my
-          recipe from <a href="/download-app" className="text-blue-600 underline">[link]</a> into the app&rdquo;).
+          recipe from [link] into the app&rdquo;).
         </li>
         <li>
           A statement that says: &ldquo;I have a good faith belief that the use of the material described above is not authorized by
