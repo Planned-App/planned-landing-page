@@ -8,12 +8,14 @@ import Script from "next/script";
 
 const poppins = Poppins({
   weight: ["300", "400", "600", "700"],
-  subsets: ["latin"]
+  subsets: ["latin"],
+  variable: "--font-poppins"
 });
 
 const inter = Inter({
   weight: ["300", "400", "600", "700"],
-  subsets: ["latin"]
+  subsets: ["latin"],
+    variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
