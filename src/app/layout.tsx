@@ -21,7 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://healthykitchen.app"),
   title: "Healthy Kitchen App",
-  description: "Healthy Kitchen App"
+  description: "Healthy eating made easy. Plan your week in minutes, enjoy delicious healthy meals, and save time & money on groceries."
 };
 
 
