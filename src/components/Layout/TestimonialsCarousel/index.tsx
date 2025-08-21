@@ -15,7 +15,7 @@ import image6 from '../../../../public/testimonials/testimonials6.png'
 import Testimonial from '@/components/Testimonial';
 
 // Define a type for the testimonial data
-interface Testimonial {
+interface TestimonialItem {
     title: string;
     text: string;
     author: string;
@@ -23,7 +23,7 @@ interface Testimonial {
     reviewLink?: string
 }
 
-const testimonials: Testimonial[] = [
+const testimonials: TestimonialItem[] = [
     {
         title: "Families & Kids Love It!",
         text: `"Planned is one of the best purchases I made this year. Each week I used to spend so much time scrolling through Pinterest recipes looking for something my family would enjoy so I decided to purchase a Planned subscription and I absolutely love it. If you are looking for an easy-to-use platform with meals the whole family will love, then Planned is for you! Even my 2-year-old loves the recipes! She's eaten every single one!"`,
@@ -104,40 +104,6 @@ const Testimonials: React.FC = () => {
                                 author={author}
                                 reviewLink={reviewLink}
                             />
-                            {/* <div className="hidden lg:flex md:flex-row flex-col items-center bg-[#fff] mx-auto p-6 md:pl-16 lg:px-20 xl:px-60 pt-6 md:py-8 lg:pt-14 xl:pt-20 lg:w-full relative">
-                                <Image
-                                    src={image}
-                                    alt={author}
-                                    width={320}
-                                    height={320}
-                                    className="rounded-md mb-4 md:mb-0 mr-0 md:mr-6 w-52 h-52 lg:w-80 lg:h-80 object-cover"
-                                />
-                                <div className="flex-1 text-center md:text-left">
-                                    <p className="font-bold text-xl md:text-[2.25rem] text-[#1E4D38] mb-4 leading-relaxed">{title}</p>
-                                    <p className="text-lg md:text-2xl text-[#1E4D38] mb-4 leading-relaxed">{text}</p>
-                                    <p className="font-semibold text-[#1E4D38] mt-2 text-[20px]">{author}</p>
-                                </div>
-                                <div className="swiper-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2"></div>
-                            </div>
-
-                            <div className="lg:hidden col-span-12 flex flex-col  border-4 border-[#1e4d38] p-7 mt-4 mx-4 bg-[#E1E6C8] text-white rounded-[30px]">
-                                <div className="w-full flex justify-center">
-                                    <Image
-                                        src={image}
-                                        alt={author}
-                                        width={300}
-                                        height={300}
-                                        layout="responsive"
-                                        className="rounded-md mb-4 w-full object-cover"
-                                    />
-                                </div>
-                                <div className="flex flex-col flex-1 xl:ml-5 ml-0 mt-3">
-                                    <p className="font-bold text2xl md:text-[2.25rem] text-[#1e4d38] mb-4 leading-relaxed">{title}</p>
-                                    <p className="text-lg md:text-2xl text-[#1e4d38] mb-4 leading-relaxed">{text}</p>
-                                    <p className="bold text-[#1e4d38] mt-2 text-[20px]">{author}</p>
-                                </div>
-                                <div className="swiper-pagination absolute bottom-4 left-1/2 transform -translate-x-1/2"></div>
-                            </div> */}
                         </SwiperSlide>
                     ))}
                 </Swiper>

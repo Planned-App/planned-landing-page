@@ -19,9 +19,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://healthykitchen.app"),
   title: "Healthy Kitchen App",
   description: "Healthy Kitchen App"
 };
+
 
 export default function RootLayout({
   children
