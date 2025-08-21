@@ -16,42 +16,59 @@ const TITLE = "Healthy Kitchen — Meal Plans, Smart Grocery Lists & Quick Healt
 const DESCRIPTION =
   "Join Healthy Kitchen to get curated meal plans, high‑protein recipes ready in 30 minutes or less, and a smart grocery list with delivery. Eat healthy without the stress.";
 
+// export const metadata: Metadata = {
+//   title: TITLE,
+//   description: DESCRIPTION,
+//   alternates: { canonical: '/' },
+//   robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+
+//   // OPTION A (recommended): let opengraph-image.tsx generate the image automatically.
+//   openGraph: {
+//     title: TITLE,
+//     description: DESCRIPTION,
+//     url: SITE_URL,
+//     siteName: 'Healthy Kitchen',
+//     type: 'website',
+//     locale: 'en_US',
+//     // images: [/* omit to use route-generated OG image */],
+//   },
+
+//   // If you prefer a static fallback image, uncomment this block:
+//   // openGraph: {
+//   //   ... (same as above),
+//   //   images: [
+//   //     {
+//   //       url: '/og/home-og.jpg', // public/og/home-og.jpg (1200x630)
+//   //       width: 1200,
+//   //       height: 630,
+//   //       type: 'image/jpeg',
+//   //       alt: 'Healthy Kitchen — meal plans and smart grocery lists',
+//   //     },
+//   //   ],
+//   // },
+
+//   twitter: {
+//     card: 'summary_large_image',
+//     title: TITLE,
+//     description: DESCRIPTION,
+//     // images: ['/og/home-og.jpg'], // only if you keep a static fallback
+//   },
+// };
+
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: { canonical: '/' },
-  robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
-
-  // OPTION A (recommended): let opengraph-image.tsx generate the image automatically.
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
-    url: SITE_URL,
-    siteName: 'Healthy Kitchen',
-    type: 'website',
-    locale: 'en_US',
-    // images: [/* omit to use route-generated OG image */],
+    images: [
+      {
+        url: "/og/home-og.png", // ✅ points to /public/og/home-og.png
+        width: 1200,
+        height: 630,
+        alt: "Healthy Kitchen — Meal Plans, Smart Grocery Lists & Quick Recipes",
+      },
+    ],
   },
-
-  // If you prefer a static fallback image, uncomment this block:
-  // openGraph: {
-  //   ... (same as above),
-  //   images: [
-  //     {
-  //       url: '/og/home-og.jpg', // public/og/home-og.jpg (1200x630)
-  //       width: 1200,
-  //       height: 630,
-  //       type: 'image/jpeg',
-  //       alt: 'Healthy Kitchen — meal plans and smart grocery lists',
-  //     },
-  //   ],
-  // },
-
   twitter: {
-    card: 'summary_large_image',
-    title: TITLE,
-    description: DESCRIPTION,
-    // images: ['/og/home-og.jpg'], // only if you keep a static fallback
+    card: "summary_large_image",
+    images: ["/og/home-og.png"],
   },
 };
 
