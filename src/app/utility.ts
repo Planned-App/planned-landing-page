@@ -8,7 +8,7 @@ export const  classNames = (...classes: string[])  =>{
 
   export const useScroll = <T extends HTMLElement>(
     options?: boolean | ScrollIntoViewOptions
-  ): [() => void, RefObject<T>] => {
+  ): [() => void, RefObject<T | null>] => {
     const elRef = useRef<T>(null);
     const executeScroll = (): void => {
       if (elRef.current) {

@@ -1,16 +1,12 @@
 "use client";
-import Link from "next/link";
-// import { ArrowLeftBoxIcon, ArrowRightBoxIcon } from '../icons';
-import { useState, useEffect } from "react";
 import HeaderMenu from "../HeaderMenu";
-import { Button, Flex } from "antd";
+import { Button } from "antd";
 import Image from "next/image"; // Import Next.js Image component
 import drawingCircle from "../../../../public/drawing-circle.png";
 import taskIcon from "../../../../public/task-icon.svg";
 import plannedLogo from "../../../../public/cart-outline.svg";
 import foodIcon from "../../../../public/food-icon.svg";
 import importIcon from "../../../../public/import-icon.svg";
-import SpringBonusBanner from "@/components/SpringBonus/SpringBonusBanner";
 
 const scrollToJoinNow = () => {
   const targetElement = document.getElementById("join-now");
@@ -54,7 +50,6 @@ const HeroSection: React.FC = () => {
   const classNameForTheIcon = "w-10 h-10 md:w-20 md:h-20";
   return (
     <>
-      {/* <section className='bg-[#ffff] overflow-hidden w-screen min-h-screen relative max-lg:h-auto bg-hero bg-center bg-no-repeat bg-cover h-fit'> */}
       <section className="bg-[#ffff] overflow-hidden w-full max-w-[100vw] min-h-[100svh] md:min-h-[100svh] relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] ">
         <div>
           <HeaderMenu />
@@ -112,8 +107,6 @@ const HeroSection: React.FC = () => {
                 <Image
                   src={taskIcon}
                   alt="task-icon"
-                  // width={64} // Set your desired width
-                  // height={64} // Set your desired height
                   className={classNameForTheIcon}
                 />
               </div>
@@ -137,8 +130,6 @@ const HeroSection: React.FC = () => {
                 <Image
                   src={importIcon}
                   alt="import-icon"
-                  // width={64} // Set your desired width
-                  // height={64} // Set your desired height
                   className={classNameForTheIcon}
                 />
               </div>
@@ -161,8 +152,6 @@ const HeroSection: React.FC = () => {
                 <Image
                   src={plannedLogo}
                   alt="planned-logo"
-                  // width={64} // Set your desired width
-                  // height={64} // Set your desired height
                   className={classNameForTheIcon}
                 />
               </div>
@@ -185,8 +174,6 @@ const HeroSection: React.FC = () => {
                 <Image
                   src={foodIcon}
                   alt="food-icon"
-                  // width={64} // Set your desired width
-                  // height={64} // Set your desired height
                   className={classNameForTheIcon}
                 />
               </div>
