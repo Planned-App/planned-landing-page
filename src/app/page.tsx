@@ -19,82 +19,84 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
-  alternates: { canonical: "/" },
-  robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': "large" },
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+
+  // OPTION A (recommended): let opengraph-image.tsx generate the image automatically.
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
     url: SITE_URL,
-    siteName: "Healthy Kitchen",
-    type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: "/og/home-og.png", // place an image in public/og/home-og.jpg (1200x630)
-        width: 1200,
-        height: 630,
-        alt: "Healthy Kitchen — meal plans and smart grocery lists",
-      },
-    ],
+    siteName: 'Healthy Kitchen',
+    type: 'website',
+    locale: 'en_US',
+    // images: [/* omit to use route-generated OG image */],
   },
+
+  // If you prefer a static fallback image, uncomment this block:
+  // openGraph: {
+  //   ... (same as above),
+  //   images: [
+  //     {
+  //       url: '/og/home-og.jpg', // public/og/home-og.jpg (1200x630)
+  //       width: 1200,
+  //       height: 630,
+  //       type: 'image/jpeg',
+  //       alt: 'Healthy Kitchen — meal plans and smart grocery lists',
+  //     },
+  //   ],
+  // },
+
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/og/home-og.png"],
+    // images: ['/og/home-og.jpg'], // only if you keep a static fallback
   },
 };
 
 export default function Home() {
    // Organization, WebSite (with SearchAction), and SoftwareApplication JSON‑LD
-  const jsonLd = [
+const jsonLd = [
     {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "@id": `${SITE_URL}#organization`,
-      name: "Planned LLC DBA Healthy Kitchen",
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      '@id': `${SITE_URL}#organization`,
+      name: 'Planned LLC DBA Healthy Kitchen',
       url: SITE_URL,
       logo: `${SITE_URL}/footer-logo-healthy-kitchen.png`,
-      sameAs: [
-        // add your profiles if available, else remove this key
-        // "https://www.instagram.com/yourhandle",
-        // "https://www.facebook.com/yourpage",
-      ],
       contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer support",
-        email: "support@healthykitchen.com",
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: 'support@healthykitchen.com',
       },
     },
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": `${SITE_URL}#website`,
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}#website`,
       url: SITE_URL,
-      name: "Healthy Kitchen",
+      name: 'Healthy Kitchen',
       potentialAction: {
-        "@type": "SearchAction",
+        '@type': 'SearchAction',
         target: `${SITE_URL}/search?q={query}`,
-        "query-input": "required name=query",
+        'query-input': 'required name=query',
       },
-      publisher: { "@id": `${SITE_URL}#organization` },
+      publisher: { '@id': `${SITE_URL}#organization` },
     },
     {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      name: "Healthy Kitchen: Meal Planner",
-      operatingSystem: "iOS, Android, Web",
-      applicationCategory: "HealthApplication",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5",
-        ratingCount: "100", // replace with real counts if you have them, otherwise remove AggregateRating
-      },
+      '@context': 'https://schema.org',
+      '@type': 'SoftwareApplication',
+      name: 'Healthy Kitchen: Meal Planner',
+      operatingSystem: 'iOS, Android, Web',
+      applicationCategory: 'HealthApplication',
+      // Remove aggregateRating if you don't have real numbers yet
+      // aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', ratingCount: '100' },
       offers: {
-        "@type": "Offer",
-        price: "0",           // if you have a paid plan, set price and priceCurrency accordingly
-        priceCurrency: "USD",
-        category: "Subscription",
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        category: 'Subscription',
         url: SITE_URL,
       },
     },
