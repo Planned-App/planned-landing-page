@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import type { NextPage } from 'next';
 import { Button } from 'antd';
 
@@ -47,7 +47,6 @@ const scrollToJoinNow = () => {
 
         if (timeElapsed < duration) requestAnimationFrame(animation);
     }
-
     // Easing function for smoother scroll animation
     function easeInOutQuad(t: number, b: number, c: number, d: number) {
         t /= d / 2;
@@ -55,13 +54,10 @@ const scrollToJoinNow = () => {
         t--;
         return (-c / 2) * (t * (t - 2) - 1) + b;
     }
-
     requestAnimationFrame(animation);
 };
 
 const GetStartedCarousel: NextPage<{}> = () => {
-
-
     const partners = [
         { image: image1.src, title: 'Mediterranean Tzatziki Bowl', time: '30', calories: '504' },
         { image: image2.src, title: 'High Protein Berry Smoothie Bowl', time: '5', calories: '416' },
@@ -85,26 +81,10 @@ const GetStartedCarousel: NextPage<{}> = () => {
         { image: image19.src, title: 'Cucumber Avocado Salmon Bowl', time: '25', calories: '490' },
         { image: image20.src, title: 'Grilled Spicy Chicken & Ranch Salad', time: '25', calories: '433' },
         { image: image21.src, title: 'Double Chocolate Brownie Protein Balls', time: '10', calories: '96' },
-
-        // { image: image10.src, title: 'Chocolate Chia Pudding', time: '5', calories: '490' },
-
-
         // Add more partners as needed
     ];
-
     return (
-        <section className='overflow-hidden'>
-            {/* <Slider {...settings}>
-                {[partners].map(partner => (
-                    <MealCard
-                        imageSrc={image.src}
-                        title="High Protein Overnight Oats"
-                        time={30}
-                        calories={400}
-                    />
-                ))}
-            </Slider> */}
-
+        <section className='overflow-hidden' aria-label="Recipe preview carousel">
             <div className="flex flex-col items-center min-h-24 bg-[#1E4D38] text-white">
                 <h1 className="text-3xl font-bold my-8 text-center">
                     <span className='!text-[#E1E6C8]'>Join to access</span> HUNDREDS <br />

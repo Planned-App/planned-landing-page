@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 import type { NextPage } from 'next';
 import AutoPlayVideoComponent from "@/components/VideoElement/AutoPlayVideoComponent";
 
-
 const VideoContent: NextPage<{}> = () => {
-
     const [videoSrc, setVideoSrc] = useState("");
       const [isMobile, setIsMobile] = useState(false);
       useEffect(() => {
@@ -45,7 +43,6 @@ const VideoContent: NextPage<{}> = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
 
     return (
         <>

@@ -1,10 +1,69 @@
 'use client';
-
 import React from 'react';
 
+import type { Metadata } from "next";
+import Script from "next/script";
+
+const SITE_URL = "https://healthykitchen.app";
+const PAGE_PATH = "/importing-copyright-dmca";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const TITLE = "Recipe Importing, Copyright, and DMCA | Healthy Kitchen";
+const DESCRIPTION =
+  "Learn how Healthy Kitchen’s personal-use recipe importing works, our stance on copyright, and how to file a DMCA request.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_PATH },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Healthy Kitchen",
+    type: "article",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+};
+
 const RecipeImportPolicy: React.FC = () => {
+   const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": PAGE_URL,
+    url: PAGE_URL,
+    name: TITLE,
+    description: DESCRIPTION,
+    datePublished: "2025-08-01",
+    dateModified: "2025-08-01",
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Recipe Importing, Copyright, and DMCA", item: PAGE_URL },
+      ],
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Planned LLC DBA Healthy Kitchen",
+      url: SITE_URL,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "support@healthykitchen.com",
+      },
+    },
+  };
+
   return (
-    <div className="px-4 md:px-8 lg:px-16 py-6 text-gray-800">
+     <main className="px-4 md:px-8 lg:px-16 py-6 text-gray-800" role="main" aria-labelledby="dmca-title">
+      <Script id="dmca-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+
       {/* Title */}
       <h1 className="text-2xl md:text-3xl font-bold mb-2 text-center md:text-left">
         Healthy Kitchen Recipe Importing, Copyright, and DMCA
@@ -241,7 +300,7 @@ const RecipeImportPolicy: React.FC = () => {
         <span className="font-semibold">support@healthykitchen.com</span>. We&rsquo;re happy to chat with creators directly and
         resolve things quickly and respectfully.
       </p>
-    </div>
+    </main>
   );
 };
 
