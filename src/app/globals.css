@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 /* Added this line of comment for Amplify */
 
@@ -10,83 +9,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-family: var(--font-poppins), var(--font-inter), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #1e4d38 !important;
-  width: 20px;
-  height: 20px;
-}
-
-.swiper-button-prev, .swiper-button-next{
-  color: #1e4d38 !important;
-}
-/* Custom styles for the Swiper pagination bullets */
-/* span.swiper-pagination-bullet.swiper-pagination-bullet-active-prev,
-span.swiper-pagination-bullet.swiper-pagination-bullet-active-next {
-  width: 20px;
-  height: 20px;
-  background-color: #e1e6c8;
-  opacity: 1;
-}
-span.swiper-pagination-bullet.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main {
-  background-color: #1e4d38;
-  width: 20px;
-  height: 20px;
-}
-span.swiper-pagination.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #e1e6c8;
-  opacity: 1;
-  margin: 0 4px;
-}
-
-span.swiper-pagination-bullet-active-next-next,
-span.swiper-pagination-bullet.swiper-pagination-bullet-active-prev-prev{
-  background-color: #1e4d38;
-}
-span.swiper-pagination {
-  position: relative !important;
-  margin-top: 2rem;
-  text-align: center;
-} */
-
-.cardTitle {
-  /* white-space: normal; */
-  /* overflow: hidden; */
-  /* word-break: break-word; */
-  /* text-align: center; */
-}
-/* .swiper-wrapper {
-  margin: 0 !important; 
-  padding: 0 !important; 
-} */
-
 
 .swiper {
   height: auto !important;

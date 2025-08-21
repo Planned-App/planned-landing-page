@@ -1,12 +1,9 @@
 'use client';
-import { useMemo, useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import the Next.js Image component
 import logo from '../../../../public/healthy-kitchen.png';
-import { useScrollPosition } from '../../../hooks/useScrollPosition';
 import type { NextPage } from 'next';
-import styles from './navbar.module.css';
 import { classNames } from '@/app/utility';
 
 type menuItemsType =
@@ -17,19 +14,10 @@ const menuItems = [
     { id: 1, label: 'Health Professionals', link: '/health-professionals' },
     { id: 2, label: 'Facilities', link: '/facilities' },
     { id: 3, label: 'About Us', link: '/about-us' },
-    // { id: 4, label: 'test', link: '/health-professionals#features-section' },
 ];
 
 const NavbarComponent: NextPage<{}> = () => {
-    const router = useRouter();
     const pathname = usePathname();
-    const scrollPosition = useScrollPosition();
-    const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
-
-    const activeMenu = useMemo(() => {
-        return menuItems.find((menu) => menu.link === pathname);
-    }, [pathname]);
-
     return (
         <>
             <div

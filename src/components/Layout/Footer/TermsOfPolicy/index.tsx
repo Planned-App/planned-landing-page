@@ -1,10 +1,78 @@
 "use client";
 
 import React from "react";
+import type { Metadata } from "next";
+import Script from "next/script";
 
+const SITE_URL = "https://healthykitchen.app";
+const PAGE_PATH = "/terms-and-condition";
+const PAGE_URL = `${SITE_URL}${PAGE_PATH}`;
+const TITLE = "Terms of Service | Healthy Kitchen";
+const DESCRIPTION =
+  "Read Healthy Kitchen’s Terms of Service covering nutrition disclaimers, allergens, Instacart integration, imported recipes, DMCA, refunds, and governing law.";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: PAGE_PATH },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Healthy Kitchen",
+    type: "article",
+    locale: "en_US"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION
+  }
+};
 const TermsOfService: React.FC = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": PAGE_URL,
+    url: PAGE_URL,
+    name: TITLE,
+    description: DESCRIPTION,
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Terms of Service",
+          item: PAGE_URL
+        }
+      ]
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Planned LLC DBA Healthy Kitchen",
+      url: SITE_URL,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: "support@healthykitchen.com"
+      }
+    }
+  };
+
   return (
-    <div className="px-4 md:px-8 lg:px-16 py-4 text-gray-800">
+    <main
+      className="px-4 md:px-8 lg:px-16 py-4 text-gray-800"
+      role="main"
+      aria-labelledby="tos-title"
+    >
+      <Script
+        id="tos-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">
         Healthy Kitchen: Meal Planner App Terms of Service
       </h1>
@@ -187,8 +255,8 @@ const TermsOfService: React.FC = () => {
       </ul>
       <p className="mb-4 text-base md:text-lg text-justify">
         If we receive a counter-notice from the user (which they have the right
-        to submit), we&apos;ll forward it to you. If the issue remains unresolved, it
-        may be up to you to pursue the matter legally.
+        to submit), we&apos;ll forward it to you. If the issue remains
+        unresolved, it may be up to you to pursue the matter legally.
       </p>
       <p className="mb-4 text-base md:text-lg text-justify">
         You can learn more about our DMCA on our full Recipe Importing,
@@ -281,7 +349,7 @@ const TermsOfService: React.FC = () => {
         use of the app and its meal plans. If you do not agree to these terms,
         please refrain from using Healthy Kitchen: Meal Planner.
       </p>
-    </div>
+    </main>
   );
 };
 

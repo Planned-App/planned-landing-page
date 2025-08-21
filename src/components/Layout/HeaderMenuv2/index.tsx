@@ -1,19 +1,9 @@
 'use client';
-import { useMemo, useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../../public/planned-logo.png';
 import type { NextPage } from 'next';
-import styles from './navbar.module.css';
-import { classNames } from '@/app/utility';
-
-
 const NavbarComponent: NextPage = () => {
-    const router = useRouter();
-    const pathname = usePathname();
-    const [isNavOpen, setIsNavOpen] = useState(false);
-
     return (
         <div className="shadow-none transition-shadow top-0 z-50">
             <nav className="w-full">
