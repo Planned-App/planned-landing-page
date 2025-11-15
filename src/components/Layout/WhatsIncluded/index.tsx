@@ -6,6 +6,9 @@ import Image from 'next/image';
 import arrowIcon from '../../../../public/arrow-icon-pointer.png';
 import checkIcon from '../../../../public/check-icon.png';
 import checkIconList from '../../../../public/check.svg'
+import { PriceWithSlash } from "@/components/PriceWithSlash";
+import { BlackFridayBanner } from "@/components/BubleBanner";
+import topRated from '../../../../public/top-rated-app.svg';
 
 const monthlyContent = [
     {
@@ -217,17 +220,37 @@ const WhatsIncluded: NextPage<{}> = () => {
                         className={`relative py-3 px-3 md:p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-3xl text-center cursor-pointer order-2`}
                         onClick={() => handlePlanChange('yearly')}
                     >
-                        <div className="absolute top-[-1.90rem] right-[0.8125rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
-                            <Image src={arrowIcon} alt="Arrow pointing to discount" width={30} height={14} className="ml-2" />
-                            <span className="md:mr-[-2.5rem] mr-[-1.2rem] ml-[-4rem] absolute top-[-25px] text-lg md:text-2xl" >Free Trial!</span>
+                        <div className="absolute top-[-4.9rem] sm:top-[-5.9rem] sm:right-[-12.1875rem] right-[-1.9rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
+                            <BlackFridayBanner className="mx-auto my-4" />
                         </div>
                         {selectedPlan === 'yearly' && (
                             <Image src={checkIcon} alt="Selected check icon" width={isMobile ? 10: 20} height={isMobile ? 10: 20} className="absolute top-2 left-2" />
                         )}
                         <h3 className="font-bold text-[#1E4D38] mb-2 md:text-[1.0625rem] text-[0.625rem]">YEARLY MEMBERSHIP</h3>
+                        <PriceWithSlash value="5.75" />
                         <p className="text-2xl md:text-4xl font-bold text-[#1E4D38]">$4.91</p>
                         <p className={`mb-2 font-bold text-[11px] md:text-base ${selectedPlan === 'yearly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
-                        <p className="text-[0.5rem] md:text-sm text-[#1E4D38]">Save 65% - billed yearly at $59</p>
+
+                        <span className="text-[0.5rem] md:text-sm text-[#1E4D38] w-full">
+                        {/* MOBILE VERSION — stacked + centered */}
+                        <span className="flex flex-col md:hidden text-center leading-tight w-full">
+                            <span>Billed annually at</span>
+
+                            <span className="flex justify-center items-center gap-[2px] whitespace-nowrap">
+                            <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
+                            <span className="font-bold">$34</span>
+                            cancel anytime.
+                            </span>
+                        </span>
+
+                        {/* DESKTOP VERSION — inline */}
+                        <span className="hidden md:inline-flex items-center gap-1 whitespace-nowrap">
+                            Billed annually at
+                            <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
+                            <span className="font-bold">$34</span>
+                            cancel anytime.
+                        </span>
+                        </span>
                     </div>
 
                     
@@ -243,7 +266,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                         <h3 className="font-bold text-[#1E4D38] mb-2 md:text-[1.0625rem] text-[0.625rem]">MONTHLY MEMBERSHIP</h3>
                         <p className="text-2xl md:text-4xl font-bold text-[#1E4D38]">$14</p>
                         <p className={`mb-2 font-bold text-[0.6875rem] md:text-base ${selectedPlan === 'monthly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
-                        <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Billed monthly at $14.</p>
+                        <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Billed monthly at $14 -Get the same plan for less than $3/mo with our Yearly Membership option...</p>
                     </div>
                 </div>
                 <div className="flex justify-center mt-[1.0625rem] mb-[0.625rem] md:my-4">
@@ -251,8 +274,19 @@ const WhatsIncluded: NextPage<{}> = () => {
                         href={joinNowUrl}
                         className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-lg !font-bold mt-[2.1875rem]'>{selectedPlan === 'monthly' ? 'Join Now' : 'Try For Free'}</Button>
                 </div>
-                <div className="flex justify-center">
-                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">Easily cancel anytime. No commitments</span>
+                <div className="flex flex-col items-center text-center">
+                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">Discount locked in for life. Easily cancel anytime.
+                    </span>
+
+                      <img
+                        src={topRated.src}
+                        alt="Top-rated badge"
+                        className="justify-center"
+                    />
+                    <p className="text-[#1E4D38] text-[0.625rem] md:text-[1rem] font-medium">
+                    Trusted by thousands of members.<br />
+                    Rated 4.8 ★ on the App Store.
+                </p>
                 </div>
             </div>
         </section>

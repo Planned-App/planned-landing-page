@@ -1,68 +1,293 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import type { NextPage } from 'next';
 import { Button } from 'antd';
 import Image from 'next/image';
 import arrowIcon from '../../../../public/arrow-icon-pointer.png';
 import checkIcon from '../../../../public/check-icon.png';
+import checkIconList from '../../../../public/check.svg'
+import { PriceWithSlash } from "@/components/PriceWithSlash";
+import { BlackFridayBanner } from "@/components/BubleBanner";
+import topRated from '../../../../public/top-rated-app.svg';
+
+const monthlyContent = [
+    {
+        title: "Create your own meal plans",
+        content: "Follow our weekly dinner menu or build your own plan.",
+    },
+    {
+        title: "350+ healthy & delicious recipes",
+        content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
+    },
+    {
+        title: "Calories & macros Included",
+        content: "Filter by gluten-free, no added sugar & more—with new categories added monthly!",
+    },
+    {
+        title: "Searchable recipe categories",
+        content: "Every recipe comes with full calories & macros.",
+    },
+    {
+        title: "Customize recipes with ingredient swaps ",
+        content: "Adjust ingredients & serving sizes to fit your needs.",
+    },
+    {
+        title: "Automatic grocery list generation",
+        content: "Instantly generate your organized shopping list.",
+    },
+    {
+        title: "Easy grocery delivery through instacart",
+        content: "Order your groceries to your door through our Instacart integration.",
+    },
+    {
+        title: "Exclusive giveaways",
+        content: "Entered to win top kitchen essentials!",
+    },
+];
+
+const yearlyContent = [
+    {
+        title: "Create your own meal plans",
+        content: "Follow our weekly dinner menu or build your own plan.",
+    },
+    {
+        title: "350+ healthy & delicious recipes",
+        content: "Breakfast, lunch, dinner & snacks—with new meals every month!",
+    },
+    {
+        title: "Calories & macros Included",
+        content: "Filter by gluten-free, no added sugar & more—with new categories added monthly!",
+    },
+    {
+        title: "Searchable recipe categories",
+        content: "Every recipe comes with full calories & macros.",
+    },
+    {
+        title: "Customize recipes with ingredient swaps ",
+        content: "Adjust ingredients & serving sizes to fit your needs.",
+    },
+    {
+        title: "Automatic grocery list generation",
+        content: "Instantly generate your organized shopping list.",
+    },
+    {
+        title: "Easy grocery delivery through instacart",
+        content: "Order your groceries to your door through our Instacart integration.",
+    },
+    {
+        title: "Exclusive giveaways",
+        content: "Entered to win top kitchen essentials!",
+    },
+];
+
+const monthlyContentWeb = [
+    {
+        title: "",
+        content: "Create custom meal plans in minutes – take the guesswork out of dinner",
+    },
+    {
+        title: "",
+        content: "350+ healthy, family-friendly recipes everyone will love",
+    },
+    {
+        title: "",
+        content: "Import recipes from the web or Instagram to keep all your favorites in one place",
+    },
+    {
+        title: "",
+        content: "Every recipe includes calories & macros so you can hit your goals",
+    },
+    {
+        title: "",
+        content: "Search by categories like gluten-free, no added sugar, and more",
+    },
+    {
+        title: "",
+        content: "Customize recipes with ingredient swaps & serving sizes to fit your needs",
+    },
+    {
+        title: "",
+        content: "Automatic grocery list generation to save time and reduce stress",
+    },
+    {
+        title: "",
+        content: "Optional fast, easy grocery delivery with Instacart",
+    },
+];
+
+const yearlyContentWeb = [
+    {
+        title: "",
+        content: "Create custom meal plans in minutes – take the guesswork out of dinner",
+    },
+    {
+        title: "",
+        content: "350+ healthy, family-friendly recipes everyone will love",
+    },
+    {
+        title: "",
+        content: "Import recipes from the web or Instagram to keep all your favorites in one place",
+    },
+    {
+        title: "",
+        content: "Every recipe includes calories & macros so you can hit your goals",
+    },
+    {
+        title: "",
+        content: "Search by categories like gluten-free, no added sugar, and more",
+    },
+    {
+        title: "",
+        content: "Customize recipes with ingredient swaps & serving sizes to fit your needs",
+    },
+    {
+        title: "",
+        content: "Automatic grocery list generation to save time and reduce stress",
+    },
+    {
+        title: "",
+        content: "Optional fast, easy grocery delivery with Instacart",
+    },
+];
+
 
 const GetStarted: NextPage<{}> = () => {
     // State to keep track of selected membership
     const [selectedPlan, setSelectedPlan] = useState<'monthly' | 'yearly'>('yearly');
+    const [contentSelectedPlan, setContentSelectedPlan] = useState(yearlyContentWeb);
+    // Update content when plan changes
+    const handlePlanChange = (plan: 'monthly' | 'yearly') => {
+        setSelectedPlan(plan);
+      
+        const content = plan === 'monthly'
+          ? isMobile ? monthlyContent : monthlyContentWeb
+          : isMobile ? yearlyContent : yearlyContentWeb;
+      
+        setContentSelectedPlan(content);
+      };
+    const [isMobile, setIsMobile] = useState(false);
 
+    useEffect(() => {
+        const content = selectedPlan === 'monthly'
+          ? isMobile ? monthlyContent : monthlyContentWeb
+          : isMobile ? yearlyContent : yearlyContentWeb;
+      
+        setContentSelectedPlan(content);
+      }, [isMobile, selectedPlan]);
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const isNowMobile = window.innerWidth <= 768;
+            setIsMobile(isNowMobile);
+
+        };
+
+        checkIsMobile();
+        window.addEventListener('resize', checkIsMobile);
+
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+    }, []);
+
+    // Define URLs for each plan type
     const joinNowUrl = selectedPlan === 'monthly'
         // ? 'https://buy.stripe.com/3cs00D3Pyfbv8ak4gj' // 12 USD 
         ? 'https://buy.stripe.com/bJe7sE2j2dvp5Ipext8N205' // 14 USD
         : 'https://buy.stripe.com/14AbIU3n62QL9YF7518N206';
-
     return (
-        <section className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
+        <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
             <h2 className="text-3xl font-bold text-[#1E4D38] mb-8 text-center">Get started today!</h2>
-            <div className="bg-white border-4 border-[#1E4D38] px-6 py-6 md:px-16 md:pb-10 md:pt-16 rounded-lg w-full max-w-4xl">
-
-                <div className="grid grid-cols-2 gap-3 md:gap-8 mt-10 md:mt-0">
+            <div className="bg-white border-4 border-[#1E4D38] px-2 py-6 md:px-16 md:pb-10 md:pt-16 rounded-[2.25rem] w-full max-w-4xl">
+                <ul className="space-y-1 md:space-y-4 text-[#000000] text-base md:text-xl font-medium pb-10 md:pb-16 px-5">
+                    {contentSelectedPlan.map((text, index) => (
+                        <li key={index} className="flex items-start">
+                            <picture className="flex-shrink-0 md:mt-0.5 mt-1">
+                                <img src={checkIconList.src} alt="check" className="w-3 h-3 md:w-5 md:h-5" />
+                            </picture>
+                            <span className="ml-2 md:ml-4 flex-1 text-[12px] md:text-[16px] font-poppins">
+                                <span className="md:font-bold">{text.title}</span>
+                                {!isMobile && <span>
+                                    {/* : */}
+                                     {text.content}</span>}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                {/* <SpringBonusComponent /> */}
+                <div className="grid grid-cols-2 gap-2 md:gap-8">
                     {/* Yearly Membership - Displayed first on mobile */}
                     <div
-                        className={`relative p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer order-2`}
-                        onClick={() => setSelectedPlan('yearly')}
+                        className={`relative py-3 px-3 md:p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-3xl text-center cursor-pointer order-2`}
+                        onClick={() => handlePlanChange('yearly')}
                     >
-                        <div className="absolute top-[-1.125rem] right-[-0.1875rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
-                            <Image src={arrowIcon} alt="Arrow pointing to discount" width={30} height={14} className="ml-2" />
-                            <span className="md:mr-[-2.5rem] mr-[-1.2rem] ml-[-4rem] absolute top-[-25px] text-xl md:text-2xl">Free Trial!</span>
+                        <div className="absolute top-[-4.9rem] sm:top-[-5.9rem] sm:right-[-12.1875rem] right-[-1.9rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
+                            <BlackFridayBanner className="mx-auto my-4" />
                         </div>
                         {selectedPlan === 'yearly' && (
-                            <Image src={checkIcon} alt="Selected check icon" width={20} height={20} className="absolute top-2 left-2" />
+                            <Image src={checkIcon} alt="Selected check icon" width={isMobile ? 10: 20} height={isMobile ? 10: 20} className="absolute top-2 left-2" />
                         )}
                         <h3 className="font-bold text-[#1E4D38] mb-2 md:text-[1.0625rem] text-[0.625rem]">YEARLY MEMBERSHIP</h3>
+                        <PriceWithSlash value="5.75" />
                         <p className="text-2xl md:text-4xl font-bold text-[#1E4D38]">$4.91</p>
-                        <p className={`mb-4 font-bold text-[11px] md:text-base ${selectedPlan === 'yearly' ? 'text-[#1E4D38]' : 'text-[#E1E6C8]'}`}>per month</p>
-                        <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Save 65% - billed yearly at $59</p>
+                        <p className={`mb-2 font-bold text-[11px] md:text-base ${selectedPlan === 'yearly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
+
+                        <span className="text-[0.5rem] md:text-sm text-[#1E4D38] w-full">
+                        {/* MOBILE VERSION — stacked + centered */}
+                        <span className="flex flex-col md:hidden text-center leading-tight w-full">
+                            <span>Billed annually at</span>
+
+                            <span className="flex justify-center items-center gap-[2px] whitespace-nowrap">
+                            <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
+                            <span className="font-bold">$34</span>
+                            cancel anytime.
+                            </span>
+                        </span>
+
+                        {/* DESKTOP VERSION — inline */}
+                        <span className="hidden md:inline-flex items-center gap-1 whitespace-nowrap">
+                            Billed annually at
+                            <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
+                            <span className="font-bold">$34</span>
+                            cancel anytime.
+                        </span>
+                        </span>
                     </div>
+
+                    
 
                     {/* Monthly Membership - Displayed second on mobile */}
                     <div
-                        className={`relative p-6 border-4 ${selectedPlan === 'monthly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-lg text-center cursor-pointer order-1`}
-                        onClick={() => setSelectedPlan('monthly')}
+                        className={`relative py-3 px-3 md:p-6  border-4 ${selectedPlan === 'monthly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-3xl text-center cursor-pointer order-1`}
+                        onClick={() => handlePlanChange('monthly')}
                     >
                         {selectedPlan === 'monthly' && (
-                            <Image src={checkIcon} alt="Selected check icon" width={20} height={20} className="absolute top-2 left-2" />
+                            <Image src={checkIcon} alt="Selected check icon" width={isMobile ? 10: 20} height={isMobile ? 10: 20} className="absolute top-2 left-2" />
                         )}
                         <h3 className="font-bold text-[#1E4D38] mb-2 md:text-[1.0625rem] text-[0.625rem]">MONTHLY MEMBERSHIP</h3>
                         <p className="text-2xl md:text-4xl font-bold text-[#1E4D38]">$14</p>
-                        <p className={`mb-4 font-bold text-[0.6875rem] md:text-base ${selectedPlan === 'monthly' ? 'text-[#1E4D38]' : 'text-[#E1E6C8]'}`}>per month</p>
-                        <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Billed monthly at $14.</p>
+                        <p className={`mb-2 font-bold text-[0.6875rem] md:text-base ${selectedPlan === 'monthly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
+                        <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Billed monthly at $14 -Get the same plan for less than $3/mo with our Yearly Membership option...</p>
                     </div>
                 </div>
-
-                <div className="mt-6 mb-2">
-                    {/* <p className="font-poppins text-[0.75rem] md:text-xl italic font-normal text-center">🎉 Plus access our premium breakfast, lunch, snack & seasonal cookbook recipes ($70 value)—FREE with any plan! Offer ends soon.</p> */}
-                </div>
-                <div className="flex justify-center mb-2">
+                <div className="flex justify-center mt-[1.0625rem] mb-[0.625rem] md:my-4">
                     <Button
                         href={joinNowUrl}
                         className='!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-16 !py-6 !font-poppins !text-lg !font-bold mt-[2.1875rem]'>{selectedPlan === 'monthly' ? 'Join Now' : 'Try For Free'}</Button>
                 </div>
-                <p className="text-[0.75rem] md:text-[1rem] italic font-normal text-center mt-4">Easily cancel anytime. No commitments</p>
+                <div className="flex flex-col items-center text-center">
+                    <span className="text-[0.625rem] md:text-[1rem] italic font-normal text-center">Discount locked in for life. Easily cancel anytime.
+                    </span>
+
+                      <img
+                        src={topRated.src}
+                        alt="Top-rated badge"
+                        className="justify-center"
+                    />
+                    <p className="text-[#1E4D38] text-[0.625rem] md:text-[1rem] font-medium">
+                    Trusted by thousands of members.<br />
+                    Rated 4.8 ★ on the App Store.
+                </p>
+                </div>
             </div>
         </section>
     );
