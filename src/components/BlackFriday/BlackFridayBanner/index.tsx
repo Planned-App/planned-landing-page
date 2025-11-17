@@ -23,12 +23,12 @@ const BlackFridayBanner: React.FC = () => {
             <div className="absolute top-0 left-0 w-full md:block hidden">
                 <HeaderMenu />
             </div>
-            <div className="flex flex-col items-center justify-center py-6 md:px-[3.1875rem] px-[25px]">
+            <div className="flex flex-col items-center justify-center py-6 md:px-[3.1875rem] px-[25px] md:pt-20 lg:pt-6">
                 <div className="text-[#1E4D38] font-bold text-lg mb-2">
-                    <span className="px-2 text-[28px] md:text-[34px] font-poppins font-semibold italic">🎉 BLACK FRIDAY SALE IS LIVE 🎁</span>
+                    <span className="px-2 text-[20px] md:text-[34px] font-poppins font-semibold italic">🎉 BLACK FRIDAY SALE IS LIVE 🎁</span>
                 </div>
 
-                <div className="text-sm md:text-md font-normal text-[#1E4D38] font-poppins justify-center text-center">
+                <div className="text-xs md:text-md font-normal text-[#1E4D38] font-poppins justify-center text-center">
                     <span>
                       <span className='font-bold'>SAVE OVER 50% ON YEARLY MEMBERSHIPS!</span>
 
