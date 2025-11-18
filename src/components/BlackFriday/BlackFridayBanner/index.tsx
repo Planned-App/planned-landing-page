@@ -25,7 +25,7 @@ const BlackFridayBanner: React.FC = () => {
             </div>
             <div className="flex flex-col items-center justify-center py-6 md:px-[3.1875rem] px-[25px] md:pt-20 lg:pt-6">
                 <div className="text-[#1E4D38] font-bold text-lg mb-2">
-                    <span className="px-2 text-[20px] md:text-[34px] font-poppins font-semibold italic">🎉 BLACK FRIDAY SALE IS LIVE 🎁</span>
+                    <span className="px-2 text-[20px] md:text-[34px] font-poppins font-semibold italic">🎉 BLACK FRIDAY SALE IS LIVE 🎉</span>
                 </div>
 
                 <div className="text-xs md:text-md font-normal text-[#1E4D38] font-poppins justify-center text-center">
