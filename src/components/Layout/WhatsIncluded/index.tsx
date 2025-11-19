@@ -237,7 +237,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                                 <span>Billed annually at</span>
 
                                 <span className="flex justify-center items-center gap-[2px] whitespace-nowrap">
-                                    <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
+                                    <PriceWithSlash value="69" textFontSize="" textFontStyle="font-bold" />
                                     <span className="font-bold">only $34 (50% off!)</span>
                                 </span>
                             </span>
@@ -245,7 +245,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                             {/* DESKTOP — always inline */}
                             <span className="hidden md:inline-flex items-center gap-1 whitespace-nowrap">
                                 Billed annually at
-                                <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
+                                <PriceWithSlash value="69" textFontSize="" textFontStyle="font-bold" />
                                 <span className="font-bold">only $34 (50% off!)</span>
                             </span>
                         </span>

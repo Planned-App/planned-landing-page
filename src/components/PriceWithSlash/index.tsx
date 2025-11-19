@@ -28,9 +28,9 @@ export const PriceWithSlash: React.FC<PriceWithSlashProps> = ({
           top-[35%]
           left-[-10%]
           w-[120%]
-          h-[2px]
+          h-[0.7px]
           bg-[#E5331A]
-          rotate-[12deg]
+          rotate-[17deg]
         "
       />
     </span>
