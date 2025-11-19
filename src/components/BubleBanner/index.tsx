@@ -25,11 +25,11 @@ export const BlackFridayBanner: React.FC<Props> = ({ className = "" }) => {
       />
 
       {/* centered text */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center pb-3">
-        <p className="text-white font-bold text-[7px] md:text-sm">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-3 text-center pb-3">
+        <p className="text-white font-bold text-[0.625rem] md:text-md lg:text-xl">
           BLACK FRIDAY SALE
         </p>
-        <p className="text-white font-extrabold text-[10px] md:text-2xl leading-tight mt-1">
+        <p className="text-white font-extrabold text-[0.875rem] md:text-xl lg:text-2xl leading-tight mt-1">
           50% OFF! <span role="img" aria-label="party">🎉</span>
         </p>
       </div>
