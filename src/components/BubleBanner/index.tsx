@@ -29,7 +29,7 @@ export const BlackFridayBanner: React.FC<Props> = ({ className = "" }) => {
         <p className="text-white font-bold text-[0.625rem] md:text-md lg:text-xl">
           BLACK FRIDAY SALE
         </p>
-        <p className="text-white font-extrabold text-[0.875rem] md:text-xl lg:text-2xl leading-tight mt-1">
+        <p className="text-white font-extrabold text-[0.75rem] md:text-xl lg:text-2xl leading-tight mt-1">
           50% OFF! <span role="img" aria-label="party">🎉</span>
         </p>
       </div>
