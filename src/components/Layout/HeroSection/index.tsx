@@ -97,7 +97,7 @@ const HeroSection: React.FC = () => {
             href="#join-now"
             className="!bg-[#1E4D38] !text-[#fff] !rounded-3xl !px-10 !py-6 !font-poppins !text-xl md:!text-[27px] font-bold mt-[2.1875rem]"
           >
-            Get Started For Free
+            Get Started
           </Button>
         </div>
 

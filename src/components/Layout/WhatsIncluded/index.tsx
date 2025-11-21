@@ -193,7 +193,7 @@ const WhatsIncluded: NextPage<{}> = () => {
     const joinNowUrl = selectedPlan === 'monthly'
         // ? 'https://buy.stripe.com/3cs00D3Pyfbv8ak4gj' // 12 USD 
         ? 'https://buy.stripe.com/bJe7sE2j2dvp5Ipext8N205' // 14 USD
-        : 'https://buy.stripe.com/14AbIU3n62QL9YF7518N206';
+        : process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_ANNUAL_DEV;
     return (
         <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-5 text-center">what’s included...</h2>
