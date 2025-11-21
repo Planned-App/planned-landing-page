@@ -238,18 +238,19 @@ const GetStarted: NextPage<{}> = () => {
                                 <span>Billed annually at</span>
 
                                 <span className="flex justify-center items-center gap-[2px] whitespace-nowrap">
-                                    <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
-                                    <span className="font-bold">only $34 (50% off!)</span>
+                                    <PriceWithSlash value="69" textFontSize="text-[11.5px] md:text-base" textFontStyle="font-bold" />
+                                    <span className="font-bold">only <span className="text-[11.5px]">$34</span> (50% off!)</span>
                                 </span>
                             </span>
 
                             {/* DESKTOP — always inline */}
                             <span className="hidden md:inline-flex items-center gap-1 whitespace-nowrap">
                                 Billed annually at
-                                <PriceWithSlash value="69" textFontSize="" textFontStyle="font-normal" />
-                                <span className="font-bold">only $34 (50% off!)</span>
+                                <PriceWithSlash value="69" textFontSize="text-base" textFontStyle="font-bold" />
+                                <span className="font-bold">only <span className="text-base">$34</span> (50% off!)</span>
                             </span>
                         </span>
+
                     </div>
 
                     
