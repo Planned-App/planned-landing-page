@@ -192,8 +192,8 @@ const WhatsIncluded: NextPage<{}> = () => {
     // Define URLs for each plan type
     const joinNowUrl = selectedPlan === 'monthly'
         // ? 'https://buy.stripe.com/3cs00D3Pyfbv8ak4gj' // 12 USD 
-        ? 'https://buy.stripe.com/bJe7sE2j2dvp5Ipext8N205' // 14 USD
-        : process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_ANNUAL_DEV;
+        ? process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_MONTHLY_DEV_NORMAL // 14 USD
+        : process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_ANNUAL_DEV_NORMAL;
     return (
         <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-5 text-center">what’s included...</h2>
@@ -220,9 +220,13 @@ const WhatsIncluded: NextPage<{}> = () => {
                         className={`relative py-3 px-3 md:p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-3xl text-center cursor-pointer order-2`}
                         onClick={() => handlePlanChange('yearly')}
                     >
-                        <div className="absolute top-[-4.9rem] right-[1rem] md:top-[-5rem] md:right-[-5rem] lg:top-[-5.9rem] lg:right-[-12.1875rem]  font-bold text-[#1E4D38] flex flex-row-reverse items-center">
-                            <BlackFridayBanner className="mx-auto my-4" />
+                        <div className="absolute top-[-1.125rem] right-[-0.1875rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
+                            <Image src={arrowIcon} alt="Arrow pointing to discount" width={30} height={14} className="ml-2" />
+                            <span className="md:mr-[-2.5rem] mr-[-1.2rem] ml-[-4rem] absolute top-[-25px] text-xl md:text-2xl">Free Trial!</span>
                         </div>
+                        {/* <div className="absolute top-[-4.9rem] right-[1rem] md:top-[-5rem] md:right-[-5rem] lg:top-[-5.9rem] lg:right-[-12.1875rem]  font-bold text-[#1E4D38] flex flex-row-reverse items-center">
+                            <BlackFridayBanner className="mx-auto my-4" />
+                        </div> */}
                         {selectedPlan === 'yearly' && (
                             <Image src={checkIcon} alt="Selected check icon" width={isMobile ? 10: 20} height={isMobile ? 10: 20} className="absolute top-2 left-2" />
                         )}
@@ -230,9 +234,9 @@ const WhatsIncluded: NextPage<{}> = () => {
                         {/* <PriceWithSlash value="5.75" /> */}
                         <p className="text-2xl md:text-4xl font-bold text-[#1E4D38]">${YEARLY_PRICE}</p>
                         <p className={`mb-2 font-bold text-[11px] md:text-base ${selectedPlan === 'yearly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
-
-                        <span className="text-[0.5rem] md:text-[0.6875rem] text-[#1E4D38] w-full">
-                            {/* MOBILE — always 2 lines */}
+                        <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Save 65% - billed yearly at $59</p>
+                        {/* <span className="text-[0.5rem] md:text-[0.6875rem] text-[#1E4D38] w-full">
+                            MOBILE — always 2 lines
                             <span className="flex flex-col md:hidden text-center leading-tight w-full">
                                 <span>Billed annually at</span>
 
@@ -242,13 +246,13 @@ const WhatsIncluded: NextPage<{}> = () => {
                                 </span>
                             </span>
 
-                            {/* DESKTOP — always inline */}
+                            DESKTOP — always inline
                             <span className="hidden md:inline-flex items-center gap-1 whitespace-nowrap">
                                 Billed annually at
                                 <PriceWithSlash value="69" textFontSize="text-base" textFontStyle="font-bold" />
                                 <span className="font-bold">only <span className="text-base">$34</span> (50% off!)</span>
                             </span>
-                        </span>
+                        </span> */}
                     </div>
 
                     
@@ -264,8 +268,9 @@ const WhatsIncluded: NextPage<{}> = () => {
                         <h3 className="font-bold text-[#1E4D38] mb-2 md:text-[1.0625rem] text-[0.625rem]">MONTHLY MEMBERSHIP</h3>
                         <p className="text-2xl md:text-4xl font-bold text-[#1E4D38]">${MONTHLY_PRICE}</p>
                         <p className={`mb-2 font-bold text-[0.6875rem] md:text-base ${selectedPlan === 'monthly' ? 'text-[#1E4D38] ' : 'text-[#E1E6C8] '} `}>per month</p>
-                        <span className="text-[0.5rem] md:text-[0.6875rem] text-[#1E4D38] w-full">
-                            {/* MOBILE — always 2 lines */}
+                        <p className="text-[0.5rem] md:text-sm  text-[#1E4D38]">Billed monthly at $14.</p>
+                        {/* <span className="text-[0.5rem] md:text-[0.6875rem] text-[#1E4D38] w-full">
+                            MOBILE — always 2 lines
                             <span className="flex flex-col md:hidden text-center leading-tight w-full">
                                 <span>Get the same plan for</span>
 
@@ -275,13 +280,13 @@ const WhatsIncluded: NextPage<{}> = () => {
                                 </span>
                             </span>
 
-                            {/* DESKTOP — always inline */}
+                            DESKTOP — always inline
                             <span className="hidden md:inline-flex items-center gap-1 whitespace-nowrap">
                                 Get the same plan for
                                 <span className="font-bold">under $3/mo</span>
                                 by choosing yearly.
                             </span>
-                        </span>
+                        </span> */}
                     </div>
                 </div>
                 <div className="flex justify-center mt-[1.0625rem] mb-[0.625rem] md:my-4">
