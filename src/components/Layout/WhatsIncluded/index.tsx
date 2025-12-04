@@ -222,7 +222,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                     >
                         <div className="absolute top-[-1.125rem] right-[-0.1875rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
                             <Image src={arrowIcon} alt="Arrow pointing to discount" width={30} height={14} className="ml-2" />
-                            <span className="md:mr-[-2.5rem] mr-[-1.2rem] ml-[-4rem] absolute top-[-25px] text-xl md:text-2xl">Free Trial!</span>
+                            <span className="md:mr-[-2.5rem] mr-[-1.2rem] ml-[-4rem] absolute top-[-25px] text-xl md:text-2xl">65% off!</span>
                         </div>
                         {/* <div className="absolute top-[-4.9rem] right-[1rem] md:top-[-5rem] md:right-[-5rem] lg:top-[-5.9rem] lg:right-[-12.1875rem]  font-bold text-[#1E4D38] flex flex-row-reverse items-center">
                             <BlackFridayBanner className="mx-auto my-4" />
