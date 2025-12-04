@@ -220,7 +220,7 @@ const WhatsIncluded: NextPage<{}> = () => {
                         className={`relative py-3 px-3 md:p-6 border-4 ${selectedPlan === 'yearly' ? 'border-[#1E4D38] bg-[#F4F6F0]' : 'border-[#E1E6C8]'} rounded-3xl text-center cursor-pointer order-2`}
                         onClick={() => handlePlanChange('yearly')}
                     >
-                        <div className="absolute top-[-1.125rem] right-[-0.1875rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
+                         <div className="absolute top-[-2rem] md:top-[-1.125rem] right-[1.8125rem] font-bold text-[#1E4D38] flex flex-row-reverse items-center">
                             <Image src={arrowIcon} alt="Arrow pointing to discount" width={30} height={14} className="ml-2" />
                             <span className="md:mr-[-2.5rem] mr-[-1.2rem] ml-[-4rem] absolute top-[-25px] text-xl md:text-2xl">65% off!</span>
                         </div>
