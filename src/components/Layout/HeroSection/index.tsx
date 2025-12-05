@@ -53,9 +53,9 @@ const HeroSection: React.FC = () => {
     <>
       <section className="bg-[#ffff] overflow-hidden w-full max-w-[100vw] min-h-[100svh] md:min-h-[100svh] relative max-lg:h-auto bg-hero md:bg-center md:bg-[position-right_-70px_top_-50px] bg-no-repeat bg-cover h-fit sm:bg-[position-right_-40px_top_-43px] bg-[left_-190px_top_-12px] ">
         <div>
-          {/* <HeaderMenu /> */}
+          <HeaderMenu />
           {/* <SpringBonusBanner /> */}
-          <BlackFridayBanner/>
+          {/* <BlackFridayBanner/> */}
         </div>
         <div className="flex flex-col items-center justify-center min-h-[calc(48vh)] md:min-h-[calc(100svh)]  lg:min-h-[calc(75vh)] text-center">
           <div className="mb-4 mt">
