@@ -193,8 +193,8 @@ const GetStarted: NextPage<{}> = () => {
     // Define URLs for each plan type
     const joinNowUrl = selectedPlan === 'monthly'
         // ? 'https://buy.stripe.com/3cs00D3Pyfbv8ak4gj' // 12 USD 
-        ? process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_MONTHLY_DEV_NORMAL // 14 USD
-        : process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_ANNUAL_DEV_NORMAL;
+        ? process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_MONTHLY_PROD_NORMAL // 14 USD
+        : process.env.NEXT_PUBLIC_STRIPE_CHECKOUT_LINK_ANNUAL_PROD_NORMAL;
     return (
         <section id='join-now' className="px-4 md:px-8 lg:px-16 py-8 bg-[#F4F6F0] flex flex-col items-center">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1E4D38] mb-5 text-center">what’s included...</h2>
